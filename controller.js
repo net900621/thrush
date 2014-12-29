@@ -27,7 +27,7 @@ exports.__creat = function(module, conf){
 		if (module.prototype[global.pathAccess[0]]) {
 			module.prototype[global.pathAccess[0]](_value);
 		}else if (!_value){
-			console.log(module.prototype.index);
+			console.log(module.prototype['index']);
 			module.prototype['index'](global.pathAccess[0]);
 		}else{
 			err404(res);
