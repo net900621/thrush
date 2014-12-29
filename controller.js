@@ -2,15 +2,26 @@ var _controller = function(){
 
 }
 _controller.prototype = {
-	render : function(data){
-		return libFs.readFileSync('./www/view/welcome.html', "utf8");
+	render : function(url, data){
+		var _tmp = './www/tmp/' + Date.now().toString();
+		if(libFs.writeFileSync(_tmp, libFs.readFileSync('./www/view/' + url + '.html', "utf8"), {'encoding' : 'utf8'})){
+			console.log(123)
+			res.writeHead(200, {"Content-Type": funGetContentType(_tmp) });
+		};
+		// return libFs.readFileSync('./www/view/welcome.html', "utf8");
+	},
+	listen : function(cbk){
+		//TODO
+		if (true) {
+			cbk();
+		};
 	}
 }
-exports.__creat = function(module, conf){
+exports.__create = function(module, conf){
 	var _path = '', _pathName = '';
 
 	util.inherits(module, _controller);
-
+	console.log((new module).toString());
 	if (conf) { 
 		for (var k in conf) 
 		module.prototype[k] = conf[k];
@@ -23,11 +34,10 @@ exports.__creat = function(module, conf){
 		if (global.pathAccess.length > 1) {
 			_value = global.pathAccess[1];
 		};
-		console.log(global.pathAccess);
 		if (module.prototype[global.pathAccess[0]]) {
 			module.prototype[global.pathAccess[0]](_value);
 		}else if (!_value){
-			console.log(module.prototype['index']);
+			// console.dir(module.prototype['index'].toString());
 			module.prototype['index'](global.pathAccess[0]);
 		}else{
 			err404(res);
