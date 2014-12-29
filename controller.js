@@ -21,7 +21,7 @@ exports.__create = function(module, conf){
 	var _path = '', _pathName = '';
 
 	util.inherits(module, _controller);
-	console.log((new module).toString());
+	console.log(module.prototype.toString())
 	if (conf) { 
 		for (var k in conf) 
 		module.prototype[k] = conf[k];
