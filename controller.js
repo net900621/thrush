@@ -2,8 +2,8 @@ var _controller = function(){
 
 }
 _controller.prototype = {
-	render : function(){
-		return 12345;
+	render : function(data){
+		return libFs.readFileSync('./www/view/welcome.html', "utf8");
 	}
 }
 exports.__creat = function(module, conf){
@@ -14,6 +14,26 @@ exports.__creat = function(module, conf){
 	if (conf) { 
 		for (var k in conf) 
 		module.prototype[k] = conf[k];
+	}
+	
+	// var mod = new module;
+
+	if (global.pathAccess.length) {
+		var _value = '';
+		if (global.pathAccess.length > 1) {
+			_value = global.pathAccess[1];
+		};
+		console.log(global.pathAccess);
+		if (module.prototype[global.pathAccess[0]]) {
+			module.prototype[global.pathAccess[0]](_value);
+		}else if (!_value){
+			console.log(module.prototype.index);
+			module.prototype['index'](global.pathAccess[0]);
+		}else{
+			err404(res);
+		}
+	}else{
+		module.prototype['index']();
 	}
 
 	//貌似这里是为了干点啥的
@@ -32,7 +52,7 @@ exports.__creat = function(module, conf){
 	// module.prototype[ _pathName ] = _path;
 	// module.prototype[ _pathName ]();
 
-	return function(module, conf){
+	// return function(module, conf){
 
-	}
+	// }
 }
