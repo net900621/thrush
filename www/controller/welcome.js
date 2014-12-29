@@ -6,7 +6,6 @@ var conf = {
 		var data = {'value' : 3},
 			self = this;
 		this.listen(function(){
-			console.log(self);
 			return self.render('welcome', data);
 		});
 	}
