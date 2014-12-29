@@ -32,7 +32,7 @@ exports.__creat = function(module, conf){
 	// module.prototype[ _pathName ] = _path;
 	// module.prototype[ _pathName ]();
 
-	return function(){
-		
+	return function(module, conf){
+
 	}
 }
