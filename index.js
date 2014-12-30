@@ -11,6 +11,12 @@ var querystring = require("querystring");
 global.util = require('util');
 global.buffer = require('buffer');
 global.pathAccess = '';
+var orm = require("orm");
+
+orm.connect("mysql://root:@127.0.0.1/MYSQLDATA", function (err, db) {
+	console.log(err);
+	console.log(db)
+});
 
 
 //Web服务器主函数,解析请求,返回Web内容
