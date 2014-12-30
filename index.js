@@ -13,7 +13,6 @@ global.buffer = require('buffer');
 global.pathAccess = '';
 
 
-
 //Web服务器主函数,解析请求,返回Web内容
 var funWebSvr = function (req, res){ 
 	global.res = res;
