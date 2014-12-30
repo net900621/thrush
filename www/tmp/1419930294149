@@ -1,6 +1,6 @@
 <html>
 <head></head>
 <body>
-	<div>123</div>
+	<div><%= this.value%></div>
 </body>
 </html>

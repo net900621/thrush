@@ -3,10 +3,13 @@ var _controller = function(){
 }
 _controller.prototype = {
 	render : function(url, data){
-		// var _tmp = './www/tmp/' + Date.now().toString();
-		// libFs.writeFileSync(_tmp, libFs.readFileSync('./www/view/' + url + '.html', "utf8"), {'encoding' : 'utf8'})
+		var _tmp = './www/tmp/' + Date.now().toString()
+			,_data = libFs.readFileSync('./www/view/' + url + '.html', "utf8")
+			,tmp = require('./etic.js');
+
+		libFs.writeFileSync(_tmp, tmp.etic(_data, data), {'encoding' : 'utf8'});
 		res.writeHead(200, {"Content-Type": "text/html" });
-		res.end(libFs.readFileSync('./www/view/' + url + '.html', "utf8"), "utf8");
+		res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
 		// return libFs.readFileSync('./www/view/welcome.html', "utf8");
 	},
 	listen : function(cbk){
