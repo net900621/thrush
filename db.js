@@ -8,6 +8,7 @@ function doDb (php) {
 	}
 	var cbk = function(){
 		console.log('I love U');
+		return 123;
 	}
 	orm.connect(opt, function (err, db) {
 		if (err) return console.error('Connection error: ' + err);
