@@ -14,7 +14,7 @@ function doDb (php) {
 	        sex : {type: 'text'}
 	    });
 		console.log(db);
-		db.models.MYTABLE.find({name: 'bar'}, function(err, rows) {
+		db.models.MYTABLE.find({name: 'yaoyao'}, function(err, rows) {
 			console.log(12345)
 			if (err) return console.error('Connection error: ' + err);
 			console.log(rows);
