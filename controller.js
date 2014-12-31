@@ -4,8 +4,7 @@ var _controller = function(){
 _controller.prototype = {
 	render : function(url, data){
 		var _tmp = './www/tmp/' + Date.now().toString()
-			,_data = libFs.readFileSync('./www/view/' + url + '.html', "utf8")
-			,tmp = require('./etic.js');
+			,_data = libFs.readFileSync('./www/view/' + url + '.html', "utf8");
 
 		libFs.writeFileSync(_tmp, tmp.etic(_data, data), {'encoding' : 'utf8'});
 		res.writeHead(200, {"Content-Type": "text/html" });
