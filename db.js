@@ -6,6 +6,9 @@ function doDb (php) {
 	    password: '',
 	    protocol: 'mysql'
 	}
+	var cbk = function(){
+		console.log('I love U');
+	}
 	orm.connect(opt, function (err, db) {
 		if (err) return console.error('Connection error: ' + err);
 		var MYTABLE = db.define("MYTABLE", {
@@ -13,10 +16,9 @@ function doDb (php) {
 	        name : {type: 'text'},
 	        sex : {type: 'text'}
 	    });
-		console.log(db);
 		db.models.MYTABLE.find({name: 'yaoyao'}, function(err, rows) {
-			console.log(12345)
 			if (err) return console.error('Connection error: ' + err);
+			cbk();
 			console.log(rows);
 	  	});
 
