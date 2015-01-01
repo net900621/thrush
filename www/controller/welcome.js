@@ -3,9 +3,9 @@ var welcome = function() {
 };
 var conf = {
 	'index' : function(){
-		var data = {'value' : 3},
+		var data = {'value' : '/model/controller/welcome'},
 			self = this;
-		this.listen(function(){
+		this.listen(data, function(){
 			return self.render('welcome', data);
 		});
 	}

@@ -1,4 +1,4 @@
-function doDb (php) {
+function doDb (module, php) {
 	var opt = {
 	    host:     'localhost',
 	    database: 'MYSQLDATA',

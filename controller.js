@@ -10,8 +10,14 @@ _controller.prototype = {
 		res.writeHead(200, {"Content-Type": "text/html" });
 		res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
 	},
-	listen : function(cbk){
+	listen : function(php, cbk){
 		//TODO
+		var _num = 0;
+		var data = {};
+		for (i in php){
+			data[i] = './www/model' + php[i] + '.html'；
+			require(data[i])
+		}
 		if (true) {
 			cbk();
 		};
