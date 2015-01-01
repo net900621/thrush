@@ -5,7 +5,6 @@ var conf = {
 	'index' : function(){
 		var data = {'value' : 3},
 			self = this;
-		db.doDb(data);
 		this.listen(function(){
 			return self.render('welcome', data);
 		});

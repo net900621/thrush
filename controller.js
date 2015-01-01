@@ -9,7 +9,6 @@ _controller.prototype = {
 		libFs.writeFileSync(_tmp, tmp.etic(_data, data), {'encoding' : 'utf8'});
 		res.writeHead(200, {"Content-Type": "text/html" });
 		res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
-		// return libFs.readFileSync('./www/view/welcome.html', "utf8");
 	},
 	listen : function(cbk){
 		//TODO
@@ -19,6 +18,7 @@ _controller.prototype = {
 	}
 }
 exports.__create = function(module, conf){
+
 	var _path = '', _pathName = '';
 
 	util.inherits(module, _controller);
@@ -29,8 +29,6 @@ exports.__create = function(module, conf){
 	}
 	
 	var modObj = new module;
-
-	// var mod = new module;
 
 	if (global.pathAccess.length) {
 		var _value = '';
