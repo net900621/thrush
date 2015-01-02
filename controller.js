@@ -26,6 +26,9 @@ _controller.prototype = {
 		};
 	},
 	setData : function(data){
+		//TODO
+		//listenStack取不到
+		//原型链上有点问题
 		for (i in data){
 			this.listenStack.push(data[i]);
 		}
