@@ -1,5 +1,5 @@
 var _controller = function(){
-
+	this.listenStack = [];
 }
 _controller.prototype = {
 	render : function(url, data){
@@ -10,12 +10,13 @@ _controller.prototype = {
 		res.writeHead(200, {"Content-Type": "text/html" });
 		res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
 	},
-	listen : function(php, cbk){
+	listen : function(cbk){
 		//TODO
 		//data没拿到
 		//应该需要别的东西搞一搞
 		var _num = 0;
 		var data = {};
+		var php = this.listenStack;
 		for (i in php){
 			data[i] = './www/model' + php[i] + '.html';
 			require(data[i])
@@ -23,6 +24,11 @@ _controller.prototype = {
 		if (true) {
 			cbk();
 		};
+	},
+	setData : function(data){
+		for (i in data){
+			this.listenStack.push(data[i]);
+		}
 	}
 }
 exports.__create = function(module, conf){

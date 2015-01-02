@@ -5,7 +5,8 @@ var conf = {
 	'index' : function(){
 		var data = {'value' : '/model/controller/welcome'},
 			self = this;
-		this.listen(data, function(){
+		this.setData(data);
+		this.listen(function(){
 			return self.render('welcome', data);
 		});
 	}
