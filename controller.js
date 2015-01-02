@@ -12,6 +12,8 @@ _controller.prototype = {
 	},
 	listen : function(php, cbk){
 		//TODO
+		//data没拿到
+		//应该需要别的东西搞一搞
 		var _num = 0;
 		var data = {};
 		for (i in php){
