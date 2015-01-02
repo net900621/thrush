@@ -15,7 +15,7 @@ _controller.prototype = {
 		var _num = 0;
 		var data = {};
 		for (i in php){
-			data[i] = './www/model' + php[i] + '.html'；
+			data[i] = './www/model' + php[i] + '.html';
 			require(data[i])
 		}
 		if (true) {
