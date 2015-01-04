@@ -3,9 +3,10 @@ var welcome = function() {
 };
 var conf = {
 	'index' : function(){
-		var data = {'value' : '/model/controller/welcome'},
+		var data = {'value' : '/welcome'},
 			self = this;
 		this.setData(data);
+		console.log(this.listenStack);
 		this.listen(function(){
 			return self.render('welcome', data);
 		});

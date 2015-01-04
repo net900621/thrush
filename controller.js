@@ -18,7 +18,7 @@ _controller.prototype = {
 		var data = {};
 		var php = this.listenStack;
 		for (i in php){
-			data[i] = './www/model' + php[i] + '.html';
+			data[i] = './www/model' + php[i] + '.js';
 			require(data[i])
 		}
 		if (true) {
@@ -29,8 +29,11 @@ _controller.prototype = {
 		//TODO
 		//listenStack取不到
 		//原型链上有点问题
+		this.listenStack = [];
+		this.listenCount = 0;
 		for (i in data){
 			this.listenStack.push(data[i]);
+			this.listenCount ++;
 		}
 	}
 }

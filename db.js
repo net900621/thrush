@@ -19,8 +19,7 @@ function doDb (module, php) {
 	    });
 		db.models.MYTABLE.find({name: 'yaoyao'}, function(err, rows) {
 			if (err) return console.error('Connection error: ' + err);
-			cbk();
-			console.log(rows);
+			cbk(rows);
 	  	});
 
 	});
