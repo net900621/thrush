@@ -33,10 +33,6 @@ _controller.prototype = {
 		listenFun();
 	},
 	setData : function(data){
-		//TODO
-		//listenStack取不到
-		//原型链上有点问题
-		//解决了
 		_controller.call(this);
 		this.listenCount = 0;
 		for (i in data){
