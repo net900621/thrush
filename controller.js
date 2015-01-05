@@ -21,15 +21,23 @@ _controller.prototype = {
 			data[i] = './www/model' + php[i] + '.js';
 			require(data[i])
 		}
-		if (true) {
-			cbk();
-		};
+		var listenFun = function(){
+			if (!this.listenCount) {
+				cbk();
+			}else{
+				setTimeout(function(){
+					listenFun();
+				},100)		
+			}
+		}
+		listenFun();
 	},
 	setData : function(data){
 		//TODO
 		//listenStack取不到
 		//原型链上有点问题
-		this.listenStack = [];
+		//解决了
+		_controller.call(this);
 		this.listenCount = 0;
 		for (i in data){
 			this.listenStack.push(data[i]);
