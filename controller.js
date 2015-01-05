@@ -11,9 +11,6 @@ _controller.prototype = {
 		res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
 	},
 	listen : function(cbk){
-		//TODO
-		//data没拿到
-		//应该需要别的东西搞一搞
 		var _num = 0;
 		var data = {};
 		var php = this.listenStack;
