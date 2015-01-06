@@ -1,5 +1,6 @@
 var _controller = function(){
 	this.listenStack = [];
+	this.listenDate = {};
 	this.listenCount = 0;
 }
 _controller.prototype = {
@@ -14,17 +15,15 @@ _controller.prototype = {
 	listen : function(cbk){
 		var _num = 0;
 		var data = {};
-		var php = this.listenStack;
+		var php = this.listenDate;
 		var self = this;
 		for (i in php){
 			data[i] = './www/model' + php[i] + '.js';
-			require(data[i]).dbThis(this);
-			// new Function('data[i].' + php[i].match(/\/([\s\S]*)$/)[1] + '(this)')();
+			require(data[i]).dbThis(this, i);
 		}
 		var listenFun = function(){
-			console.log(self.listenCount);
 			if (!self.listenCount) {
-				cbk();
+				cbk(self.listenDate);
 			}else{
 				setTimeout(function(){
 					listenFun();
@@ -39,6 +38,7 @@ _controller.prototype = {
 			this.listenStack.push(data[i]);
 			this.listenCount ++;
 		}
+		this.listenDate = data;
 	}
 }
 exports.__create = function(module, conf){

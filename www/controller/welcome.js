@@ -7,7 +7,8 @@ var conf = {
 			self = this;
 		this.setData(data);
 		console.log(this.listenStack);
-		this.listen(function(){
+		this.listen(function(data){
+			console.log(data);
 			return self.render('welcome', data);
 		});
 	}

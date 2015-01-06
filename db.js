@@ -1,4 +1,4 @@
-function doDb (model, self) {
+function doDb (model, self, key) {
 	var opt = {
 	    host:     'localhost',
 	    database: 'MYSQLDATA',
@@ -9,7 +9,8 @@ function doDb (model, self) {
 	var cbk = function(data){
 		console.log('I love U');
 		self.listenCount --;
-		return 123;
+		self.listenDate[key] = data[0];
+		return false;
 	}
 	orm.connect(opt, function (err, db) {
 		if (err) return console.error('Connection error: ' + err);

@@ -1,4 +1,4 @@
-var dbThis = function(self){
-	db.doDb('welcome', self);
+var dbThis = function(self, key){
+	db.doDb('welcome', self, key);
 }
 exports.dbThis = dbThis;
