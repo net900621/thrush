@@ -1,5 +1,6 @@
 var _controller = function(){
 	this.listenStack = [];
+	this.listenCount = 0;
 }
 _controller.prototype = {
 	render : function(url, data){
@@ -14,12 +15,15 @@ _controller.prototype = {
 		var _num = 0;
 		var data = {};
 		var php = this.listenStack;
+		var self = this;
 		for (i in php){
 			data[i] = './www/model' + php[i] + '.js';
-			require(data[i])
+			require(data[i]).dbThis(this);
+			// new Function('data[i].' + php[i].match(/\/([\s\S]*)$/)[1] + '(this)')();
 		}
 		var listenFun = function(){
-			if (!this.listenCount) {
+			console.log(self.listenCount);
+			if (!self.listenCount) {
 				cbk();
 			}else{
 				setTimeout(function(){
@@ -31,7 +35,6 @@ _controller.prototype = {
 	},
 	setData : function(data){
 		_controller.call(this);
-		this.listenCount = 0;
 		for (i in data){
 			this.listenStack.push(data[i]);
 			this.listenCount ++;

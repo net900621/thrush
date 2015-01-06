@@ -1,4 +1,4 @@
-function doDb (module, php) {
+function doDb (model, self) {
 	var opt = {
 	    host:     'localhost',
 	    database: 'MYSQLDATA',
@@ -6,8 +6,9 @@ function doDb (module, php) {
 	    password: '',
 	    protocol: 'mysql'
 	}
-	var cbk = function(){
+	var cbk = function(data){
 		console.log('I love U');
+		self.listenCount --;
 		return 123;
 	}
 	orm.connect(opt, function (err, db) {
@@ -21,7 +22,6 @@ function doDb (module, php) {
 			if (err) return console.error('Connection error: ' + err);
 			cbk(rows);
 	  	});
-
 	});
 
 }
