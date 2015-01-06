@@ -8,9 +8,8 @@ var conf = {
 		this.setData(data);
 		console.log(this.listenStack);
 		this.listen(function(data){
-			console.log(data);
 			return self.render('welcome', data);
 		});
 	}
 };
-exports.__create = controller.__create(welcome, conf);
+controller.__create(welcome, conf);

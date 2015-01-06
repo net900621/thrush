@@ -62,10 +62,10 @@ exports.__create = function(module, conf){
 		if (modObj[global.pathAccess[0]]) {
 			modObj[global.pathAccess[0]](_value);
 		}else if (!_value){
-			// console.dir(module.prototype['index'].toString());
 			modObj['index'](global.pathAccess[0]);
 		}else{
-			err404(res);
+			// TODO
+			// err404(res);
 		}
 	}else{
 		modObj['index']();

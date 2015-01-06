@@ -18,7 +18,6 @@ global.pathAccess = '';
 
 //Web服务器主函数,解析请求,返回Web内容
 var funWebSvr = function (req, res){ 
-	global.res = res;
 	//获取请求的url
 	var reqUrl = req.url; 
 	//使用url解析模块获取url中的路径名
@@ -44,7 +43,8 @@ var funWebSvr = function (req, res){
 		require('./' + pathReal);
 	}
 	else{
-		err404(res);
+		res.writeHead(404, {"Content-Type": "text/html"});
+		res.end("<h1>404 Not Found !</h1>");
 	}
 
 }
@@ -67,9 +67,3 @@ webSvr.listen(8124,function(){
 	//结束服务启动计时器并输出
 	console.timeEnd('[WebSvr][Start]');
 });
-
-
-global.err404 = function(res){
-	res.writeHead(404, {"Content-Type": "text/html"});
-	res.end("<h1>404 Not Found !</h1>");
-}
