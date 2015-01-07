@@ -9,8 +9,8 @@ _controller.prototype = {
 			,_data = libFs.readFileSync('./www/view/' + url + '.html', "utf8");
 
 		libFs.writeFileSync(_tmp, tmp.etic(_data, data), {'encoding' : 'utf8'});
-		res.writeHead(200, {"Content-Type": "text/html" });
-		res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
+		this.res.writeHead(200, {"Content-Type": "text/html" });
+		this.res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");
 	},
 	listen : function(cbk){
 		var _num = 0;
@@ -42,8 +42,7 @@ _controller.prototype = {
 	}
 }
 exports.__create = function(module, conf){
-
-	var _path = '', _pathName = '';
+	// var _path = '', _pathName = '';
 
 	util.inherits(module, _controller);
 
@@ -52,24 +51,11 @@ exports.__create = function(module, conf){
 		module.prototype[k] = conf[k];
 	}
 	
-	var modObj = new module;
-
-	if (global.pathAccess.length) {
-		var _value = '';
-		if (global.pathAccess.length > 1) {
-			_value = global.pathAccess[1];
-		};
-		if (modObj[global.pathAccess[0]]) {
-			modObj[global.pathAccess[0]](_value);
-		}else if (!_value){
-			modObj['index'](global.pathAccess[0]);
-		}else{
-			// TODO
-			// err404(res);
-		}
-	}else{
-		modObj['index']();
+	return function(modName, appPath){
+		var modObj = new module;
+		return modObj;
 	}
+	
 
 	//貌似这里是为了干点啥的
 	//好像index里面能跳转别的controller的思路一出来，这里就没用了

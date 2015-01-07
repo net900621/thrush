@@ -12,4 +12,4 @@ var conf = {
 		});
 	}
 };
-controller.__create(welcome, conf);
+exports.__create = controller.__create(welcome, conf);

@@ -13,7 +13,6 @@ global.buffer = require('buffer');
 global.tmp = require('./etic.js');
 global.db = require('./db.js');
 global.orm = require("orm");
-global.pathAccess = '';
 
 
 //Web服务器主函数,解析请求,返回Web内容
@@ -28,25 +27,47 @@ var funWebSvr = function (req, res){
 	};
 	var pathArr = ['www/controller/' + pathClear + '.js', 'www/controller/' + pathClear.replace(/\/[^\/]+$/,'') + '.js', 'www/controller/' + pathClear.replace(/\/[^\/]+\/[^\/]+$/,'') + '.js'];
 	var pathReal = '';
+	var pathAccess = [];
 	if (libFs.existsSync(pathArr[0])) {
 		pathReal = pathArr[0];
-		require('./' + pathReal);
-		// res.writeHead(200);
-		// res.end(JSON.stringify(obj));
+		render200(require('./' + pathReal), req, res, pathAccess);
 	}else if (libFs.existsSync(pathArr[1])){
 		pathReal = pathArr[1];
-		global.pathAccess = [pathClear.match(/\/[^\/]+$/)[0].replace(/\//g, '')];
-		require('./' + pathReal);
+		pathAccess = [pathClear.match(/\/[^\/]+$/)[0].replace(/\//g, '')];
+		render200(require('./' + pathReal), req, res, pathAccess);
 	}else if (libFs.existsSync(pathArr[2])){
 		pathReal = pathArr[2];
-		global.pathAccess = pathClear.match(/\/[^\/]+\/[^\/]+$/)[0].replace(/^\/|\/$/g, '').split(/\//);
-		require('./' + pathReal);
+		pathAccess = pathClear.match(/\/[^\/]+\/[^\/]+$/)[0].replace(/^\/|\/$/g, '').split(/\//);
+		render200(require('./' + pathReal), req, res, pathAccess);
 	}
 	else{
 		res.writeHead(404, {"Content-Type": "text/html"});
 		res.end("<h1>404 Not Found !</h1>");
 	}
 
+}
+
+var render200 = function(model, req, res, pathAccess){
+	var modObj = new model.__create();
+	modObj.res = res;
+	modObj.req = req;
+	console.log(pathAccess);
+	if (pathAccess.length) {
+		var _value = '';
+		if (pathAccess.length > 1) {
+			_value = pathAccess[1];
+		};
+		if (modObj[pathAccess[0]]) {
+			modObj[pathAccess[0]](_value);
+		}else if (!_value){
+			modObj['index'](pathAccess[0]);
+		}else{
+			res.writeHead(404, {"Content-Type": "text/html"});
+			res.end("<h1>404 Not Found !</h1>");
+		}
+	}else{
+		modObj['index']();
+	}
 }
 
 //创建一个http服务器
