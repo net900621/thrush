@@ -7,7 +7,6 @@ function doDb (model, self, key) {
 	    protocol: 'mysql'
 	}
 	var cbk = function(data){
-		console.log('I love U');
 		self.listenCount --;
 		self.listenDate[key] = data[0];
 		return false;
