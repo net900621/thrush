@@ -1,8 +1,9 @@
-var funGetContentType=function(filePath){
+var funGetContentType = function(filePath){
     var contentType = "";
     //使用路径解析模块获取文件扩展名
-    var ext=libPath.extname(filePath);
-    contentType = contentTypes[ext];
+    // var ext = libPath.extname(filePath);
+    // contentType = contentTypes[ext];
+    contentType = contentTypes[filePath];
     return contentType; //返回内容类型字符串
 }
 var contentTypes = {

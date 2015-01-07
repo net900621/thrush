@@ -8,11 +8,11 @@ global.libFs = require("fs");    //文件系统模块
 var libPath = require("path");    //路径解析模块
 global.controller = require("./controller.js"); 
 var querystring = require("querystring");
-global.util = require('util');
-global.buffer = require('buffer');
+// global.util = require('util');
+// global.buffer = require('buffer');
 global.tmp = require('./etic.js');
 global.db = require('./db.js');
-global.orm = require("orm");
+var contentType = require("./contentType");
 
 
 //Web服务器主函数,解析请求,返回Web内容
@@ -21,6 +21,18 @@ var funWebSvr = function (req, res){
 	var reqUrl = req.url; 
 	//使用url解析模块获取url中的路径名
 	var pathName = libUrl.parse(reqUrl).pathname;
+	var suffix = pathName.match(/\.([^\/]*$)/);
+	if (suffix) {
+		var suffixType = '';
+		if (suffix[1] == 'css') {
+			suffixType = 'css';
+		}else{
+			suffixType == 'js';
+		}
+		res.writeHead(200, {"Content-Type": contentType(suffix[1]) });
+		res.end(libFs.readFileSync('./static/' + suffixType + pathName, "utf8"), "utf8");
+		return false;
+	};
 	var pathClear = pathName.replace(/^\/|\/$/g,'');
 	if (pathClear == '') {
 		pathClear = 'welcome';
@@ -51,7 +63,6 @@ var render200 = function(model, req, res, pathAccess){
 	var modObj = new model.__create();
 	modObj.res = res;
 	modObj.req = req;
-	console.log(pathAccess);
 	if (pathAccess.length) {
 		var _value = '';
 		if (pathAccess.length > 1) {

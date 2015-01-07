@@ -1,3 +1,4 @@
+var util = require('util');
 var _controller = function(){
 	this.listenStack = [];
 	this.listenDate = {};

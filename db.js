@@ -1,3 +1,4 @@
+var orm = require("orm");
 function doDb (model, self, key) {
 	var opt = {
 	    host:     'localhost',
