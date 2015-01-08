@@ -1,0 +1,22 @@
+/**
+* css reset
+**/
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td, map{margin: 0; padding: 0;}
+* html,* html body{background-image: url(about:blank);background-attachment: fixed;}
+ul, ol, dl, li{ list-style: none;}
+pre {white-space: pre-wrap;word-wrap: break-word;}
+h3{_zoom: 1;}
+input,textarea{resize: none; outline: none; font-family:Arial;word-wrap: break-word;}
+fieldset, img{border: 0;}
+legend { display:none; }
+a{color: #666; text-decoration: none;
+	&:hover { color:#ff6699; }
+}
+a:focus{outline: none;}
+em{font-style: normal;}
+html{_overflow-x: hidden;}
+body{ background-color: #f2f0f0; color: #666; font-size: 12px; font-family: Arial;}
+
+.clear_f{
+	clear: both; overflow:hidden; height:0px; 
+}

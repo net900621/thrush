@@ -1,4 +1,8 @@
 exports.etic = function (str, data){
+	str = str.replace(/<%#([^<]*)#%>/g,function(){
+		var strTmp = libFs.readFileSync('./www/view/' + arguments[1].trim(), "utf8");
+		return strTmp;
+	});
 	var cache = {};
 	if (!cache[str] ){
 		var tpl = str
