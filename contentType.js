@@ -142,3 +142,4 @@ var contentTypes = {
 	"xyz": "chemical/x-pdb",
 	"zip": "application/zip"
 };
+exports.funGetContentType = funGetContentType;
