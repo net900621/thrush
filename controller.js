@@ -8,7 +8,6 @@ _controller.prototype = {
 	render : function(url, data){
 		var _tmp = './www/tmp/' + Date.now().toString()
 			,_data = libFs.readFileSync('./www/view/' + url + '.html', "utf8");
-
 		libFs.writeFileSync(_tmp, tmp.etic(_data, data), {'encoding' : 'utf8'});
 		this.res.writeHead(200, {"Content-Type": "text/html" });
 		this.res.end(libFs.readFileSync(_tmp, "utf8"), "utf8");

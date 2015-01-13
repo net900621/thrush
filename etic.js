@@ -3,6 +3,7 @@ exports.etic = function (str, data){
 		var strTmp = libFs.readFileSync('./www/view/' + arguments[1].trim(), "utf8");
 		return strTmp;
 	});
+	
 	var cache = {};
 	if (!cache[str] ){
 		var tpl = str
