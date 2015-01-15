@@ -1,5 +1,8 @@
 var dbThis = function(self, key){
-	var opt = {
+	this.stack = [];
+	this.count = 0;
+
+	db.dbFind(self, key, {
 		'table' : 'MYTABLE',
 		'list' : {
 			id : {type: 'serial', key: true},
@@ -7,7 +10,6 @@ var dbThis = function(self, key){
 	        sex : {type: 'text'}
 	    },
 		'findList' : {'name': 'yaoyao'}
-	}
-	db.dbFind(self, key, opt);
+	});
 }
 exports.dbThis = dbThis;
