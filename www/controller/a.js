@@ -3,11 +3,11 @@ var a = function() {
 };
 var conf = {
 	'index' : function(){
-		var data = {'value' : '/welcome'},
+		var data = {},
 			self = this;
 		this.setData(data);
 		this.listen(function(data){
-			return self.render('welcome', data);
+			return self.render('a', data);
 		});
 	}
 };

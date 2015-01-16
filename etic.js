@@ -3,7 +3,18 @@ exports.etic = function (str, data){
 		var strTmp = libFs.readFileSync('./www/view/' + arguments[1].trim(), "utf8");
 		return strTmp;
 	});
-	
+	var i = 0,
+		jsStack = [],
+		jsLink = '<script>';
+	str = str.replace(/<%[^<]*(fml.use\(\'[\s\S]*'\))[^<]*%>/g,function(){
+		jsStack[i++] = arguments[1];
+		return '';
+	});
+	jsStack.map(function(v, i){
+		jsLink += v;
+		jsLink += ';';
+	});
+	jsLink += '</script>';
 	var cache = {};
 	if (!cache[str] ){
 		var tpl = str
@@ -29,7 +40,7 @@ exports.etic = function (str, data){
 	var fn = cache[str]
 	if (data){
 		try{
-			return fn.apply( data )
+			return fn.apply( data ).replace(/<\/body>/g,jsLink + '</body>')
 		}catch(e){
 			if (console){
 				console.log(e)
@@ -37,5 +48,5 @@ exports.etic = function (str, data){
 				}
 			}
 	}else
-	return fn
+	return fn().replace(/<\/body>/g,jsLink + '</body>')
 };
