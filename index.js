@@ -39,7 +39,7 @@ var funWebSvr = function (req, res){
 		var _statics = './statics/' + suffixType + pathName;
 		if (libFs.existsSync(_statics)) {
 			res.writeHead(200, {"Content-Type": contentType.funGetContentType(suffix[1]) });
-			res.end(libFs.readFileSync(_statics, "utf8"), "utf8");
+			res.end(libFs.readFileSync(_statics));
 		}else{
 			res.writeHead(404, {"Content-Type": "text/html"});
 			res.end("<h1>404 Not Found !</h1>");
