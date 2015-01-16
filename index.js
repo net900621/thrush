@@ -18,7 +18,7 @@ var contentType = require("./contentType");
 //Web服务器主函数,解析请求,返回Web内容
 var funWebSvr = function (req, res){ 
 
-	
+
 
 	//获取请求的url
 	var reqUrl = req.url; 
@@ -31,6 +31,8 @@ var funWebSvr = function (req, res){
 			suffixType = 'css';
 		}else if (suffix[1] == 'js') {
 			suffixType = 'js';
+		}else if (suffix[1] == 'jpg' || suffix[1] == 'png' || suffix[1] == 'gif') {
+			suffixType = 'img';
 		}else{
 			suffixType = 'suffix[1]';
 		}
