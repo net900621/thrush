@@ -8,6 +8,7 @@ var conf = {
 		this.setData(data);
 		console.log(this.listenStack);
 		this.listen(function(data){
+			self.cssLink = ['welcome'];
 			return self.render('welcome', data);
 		});
 	}
