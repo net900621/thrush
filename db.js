@@ -33,7 +33,7 @@ function dbFind (self, key, _opt) {
 		var _self = self,
 			_key = key;
 		var MYTABLE = db.define(_opt.table, _opt.list);
-		db.models.MYTABLE.find(_opt.findList, function(err, rows) {
+		db.models[_opt.table].find(_opt.findList, function(err, rows) {
 			if (err) return console.error('Connection error: ' + err);
 			cbk(rows, function(){
 				console.log('success!!!');

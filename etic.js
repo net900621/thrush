@@ -4,7 +4,6 @@ exports.etic = function (str, data, css){
 	css.map(function(v, i) {
 		cssList += cssDel.replace(/\$/,v);
 	});
-	console.log(cssList);
 	str = str.replace(/<%#([^<]*)#%>/g,function(){
 		var strTmp = libFs.readFileSync('./www/view/' + arguments[1].trim(), "utf8");
 		return strTmp;

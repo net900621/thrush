@@ -17,6 +17,9 @@ var contentType = require("./contentType");
 
 //Web服务器主函数,解析请求,返回Web内容
 var funWebSvr = function (req, res){ 
+
+	
+
 	//获取请求的url
 	var reqUrl = req.url; 
 	//使用url解析模块获取url中的路径名
