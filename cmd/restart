@@ -1,0 +1,8 @@
+#!/bin/bash 
+basepath=$(cd `dirname $0`; pwd)'/../'
+pid=`cat $basepath'config/pid'`
+if [ $pid ];then
+kill $pid
+fi
+echo '' >  $basepath'config/pid'
+nohup node $basepath'index.js'&

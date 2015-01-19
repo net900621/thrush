@@ -14,11 +14,10 @@ global.tmp = require('./etic.js');
 global.db = require('./db.js');
 var contentType = require("./contentType");
 
+libFs.writeFileSync('./config/pid',process.pid);
 
 //Web服务器主函数,解析请求,返回Web内容
 var funWebSvr = function (req, res){ 
-
-
 
 	//获取请求的url
 	var reqUrl = req.url; 
