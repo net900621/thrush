@@ -5,4 +5,5 @@ if [ $pid ];then
 kill $pid
 fi
 echo '' >  $basepath'config/pid'
+cd $basepath
 nohup node $basepath'index.js'&
