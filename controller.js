@@ -20,18 +20,14 @@ _controller.prototype = {
 		var self = this;
 		for (i in php){
 			data[i] = './www/model' + php[i] + '.js';
-			require(data[i]).dbThis(this, i);
+			require(data[i]).dbThis(function(err,dd){
+				self.listenDate[i] = dd;
+				self.listenCount --;
+				if (!self.listenCount ) {
+					cbk(self.listenDate);
+				};
+			});
 		}
-		var listenFun = function(){
-			if (!self.listenCount) {
-				cbk(self.listenDate);
-			}else{
-				setTimeout(function(){
-					listenFun();
-				},100)		
-			}
-		}
-		listenFun();
 	},
 	setData : function(data){
 		_controller.call(this);
