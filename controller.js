@@ -18,6 +18,9 @@ _controller.prototype = {
 		var data = {};
 		var php = this.listenDate;
 		var self = this;
+		if (!self.listenCount ) {
+			cbk(self.listenDate);
+		};
 		for (i in php){
 			data[i] = './www/model' + php[i] + '.js';
 			require(data[i]).dbThis(function(err,dd){

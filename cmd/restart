@@ -1,10 +1,30 @@
 #!/bin/bash 
 basepath=$(cd `dirname $0`; pwd)'/../'
 pid=`cat $basepath'config/pid'`
-if [ $pid ];then
-kill $pid
+stopService(){
+	if [ $pid ];then
+	kill $pid
+	fi
+	rm -rf $basepath'www/tmp/*'
+	echo '' >  $basepath'config/pid'
+}
+startService(){
+	cd $basepath
+	nohup node $basepath'index.js'&
+}
+if [ $# -eq 0 ];then
+	echo "you should pass args start|restart|stop"	
+else
+	case $1 in
+		"stop") 
+			stopService
+			;;
+		"start") 
+			startService
+			;;
+		"restart") 
+			stopService
+			startService
+			;;
+	esac
 fi
-rm -rf $basepath'www/tmp/*'
-echo '' >  $basepath'config/pid'
-cd $basepath
-nohup node $basepath'index.js'&
