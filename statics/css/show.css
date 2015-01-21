@@ -77,7 +77,7 @@
 .foot-banner img{
 	display: block;
 	width: 40%;
-	height: 100px;
+	height: 110px;
 	margin: 0 auto 50px auto;
 	-webkit-animation: rotate 3s infinite ease-out;
 }
