@@ -4,6 +4,7 @@ pid=`cat $basepath'config/pid'`
 if [ $pid ];then
 kill $pid
 fi
+rm -rf $basepath'www/tmp/*'
 echo '' >  $basepath'config/pid'
 cd $basepath
 nohup node $basepath'index.js'&
