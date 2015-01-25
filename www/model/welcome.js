@@ -1,7 +1,7 @@
 var dbThis = function(cbk){
 	var _self = this;
 	this.stack = {};
-	this.count = 0;
+	this.count = 1;
 	
 	db.dbFind(this, 'find', {
 		'table' : 'MYTABLE',
