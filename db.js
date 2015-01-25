@@ -25,6 +25,7 @@ function doDb (self, key, callback, _opt) {
 }
 
 function dbFind (self, key, _opt) {
+	self.count ++;
 	var callback = function(db, self, key, _cbk, _opt){
 		var _self = self,
 			_key = key;
