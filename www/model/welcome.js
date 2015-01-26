@@ -1,9 +1,8 @@
-var dbThis = function(cbk){
-	var _self = this;
-	this.stack = {};
+var dbThis = function(self, key){
+	this.stack = [];
 	this.count = 0;
-	
-	db.dbFind(this, 'find', {
+
+	db.dbFind(self, key, {
 		'table' : 'MYTABLE',
 		'list' : {
 			id : {type: 'serial', key: true},
@@ -12,10 +11,5 @@ var dbThis = function(cbk){
 	    },
 		'findList' : {'name': 'yaoyao'}
 	});
-	
-	db.dbResult(this, function(_self){
-		return cbk(null ,_self.stack.find);
-	});
-
 }
 exports.dbThis = dbThis;
