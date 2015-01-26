@@ -6,7 +6,6 @@ var conf = {
 		var data = {},
 			self = this;
 		this.setData(data);
-		console.log(this.listenStack);
 		this.listen(function(data){
 			self.cssLink = ['show'];
 			return self.render('show', data);
