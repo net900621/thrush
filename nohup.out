@@ -1,93 +1,27 @@
 [WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 76ms
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
-{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
+[WebSvr][Start]: 252ms
+[ '/welcome' ]
+/Users/a2014-280/hetweb/thrush/db.js:13
+	self.stack[key] = data[0];
+	                ^
+TypeError: Cannot set property 'undefined' of undefined
+    at _cbk (/Users/a2014-280/hetweb/thrush/db.js:13:18)
+    at /Users/a2014-280/hetweb/thrush/db.js:34:4
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:213:72
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Singleton.js:34:10
+    at Object.<anonymous> (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Model.js:124:12)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Instance.js:28:7
+    at Array.map (native)
+    at Instance.emitEvent (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Instance.js:27:17)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Instance.js:748:4
+    at process._tickCallback (node.js:339:11)
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 70ms
-[]
-[]
 [WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 69ms
-[]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 69ms
-[]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 309ms
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 120ms
-[]
-[]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 221ms
-[]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 254ms
-[]
+[WebSvr][Start]: 71ms
 [ '/welcome' ]
-[]
-[]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 145ms
-[]
-[]
-[ '/welcome' ]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 113ms
-[]
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 119ms
-<Buffer 2f 2a 0a 2a 66 61 73 74 65 72 20 6a 61 76 61 73 63 72 69 70 74 20 6d 6f 64 75 6c 65 20 70 61 63 6b 61 67 65 20 6d 61 6e 61 67 65 72 0a 2a 40 61 75 74 68 ...>
-<Buffer 2f 2a 2a 0a 2a 20 63 73 73 20 72 65 73 65 74 0a 2a 2a 2f 0a 68 74 6d 6c 2c 20 62 6f 64 79 2c 20 64 69 76 2c 20 68 31 2c 20 68 32 2c 20 68 33 2c 20 68 34 ...>
-<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 70 61 67 65 2f 77 65 6c 63 6f 6d 65 27 2c 20 5b 27 6a 71 75 65 72 79 27 5d 2c 20 66 75 6e 63 74 69 6f 6e 28 72 65 71 ...>
-<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 6a 71 75 65 72 79 27 2c 66 75 6e 63 74 69 6f 6e 28 29 7b 0a 09 28 66 75 6e 63 74 69 6f 6e 28 61 2c 62 29 7b 66 75 6e ...>
-[]
-<Buffer 2e 77 72 61 70 7b 0a 09 77 69 64 74 68 3a 20 39 36 30 70 78 3b 0a 7d 0a 2e 6d 61 69 6e 7b 0a 09 77 69 64 74 68 3a 20 31 30 30 25 3b 0a 09 62 61 63 6b 67 ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 00 80 00 00 00 80 08 06 00 00 00 c3 3e 61 cb 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer 2f 2a 0a 2a 66 61 73 74 65 72 20 6a 61 76 61 73 63 72 69 70 74 20 6d 6f 64 75 6c 65 20 70 61 63 6b 61 67 65 20 6d 61 6e 61 67 65 72 0a 2a 40 61 75 74 68 ...>
-<Buffer 2f 2a 2a 0a 2a 20 63 73 73 20 72 65 73 65 74 0a 2a 2a 2f 0a 68 74 6d 6c 2c 20 62 6f 64 79 2c 20 64 69 76 2c 20 68 31 2c 20 68 32 2c 20 68 33 2c 20 68 34 ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 00 e6 00 00 00 64 08 06 00 00 00 92 12 4c 68 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 01 c6 00 00 01 7a 08 02 00 00 00 0c 08 6f 70 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 70 61 67 65 2f 73 68 6f 77 27 2c 20 5b 27 6a 71 75 65 72 79 27 5d 2c 20 66 75 6e 63 74 69 6f 6e 28 72 65 71 75 69 72 ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 01 2c 00 00 01 0e 08 06 00 00 00 33 19 2a 48 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 6a 71 75 65 72 79 27 2c 66 75 6e 63 74 69 6f 6e 28 29 7b 0a 09 28 66 75 6e 63 74 69 6f 6e 28 61 2c 62 29 7b 66 75 6e ...>
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 113ms
-[WebSvr][Start] running at http://127.0.0.1:8124/
-[WebSvr][Start]: 78ms
-<Buffer 2f 2a 0a 2a 66 61 73 74 65 72 20 6a 61 76 61 73 63 72 69 70 74 20 6d 6f 64 75 6c 65 20 70 61 63 6b 61 67 65 20 6d 61 6e 61 67 65 72 0a 2a 40 61 75 74 68 ...>
-<Buffer 2f 2a 2a 0a 2a 20 63 73 73 20 72 65 73 65 74 0a 2a 2a 2f 0a 68 74 6d 6c 2c 20 62 6f 64 79 2c 20 64 69 76 2c 20 68 31 2c 20 68 32 2c 20 68 33 2c 20 68 34 ...>
-<Buffer 2e 77 72 61 70 7b 0a 09 77 69 64 74 68 3a 20 39 36 30 70 78 3b 0a 7d 0a 2e 6d 61 69 6e 7b 0a 09 77 69 64 74 68 3a 20 31 30 30 25 3b 0a 09 62 61 63 6b 67 ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 00 80 00 00 00 80 08 06 00 00 00 c3 3e 61 cb 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 00 e6 00 00 00 64 08 06 00 00 00 92 12 4c 68 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 01 c6 00 00 01 7a 08 02 00 00 00 0c 08 6f 70 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 70 61 67 65 2f 73 68 6f 77 27 2c 20 5b 27 6a 71 75 65 72 79 27 5d 2c 20 66 75 6e 63 74 69 6f 6e 28 72 65 71 75 69 72 ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 01 2c 00 00 01 0e 08 06 00 00 00 33 19 2a 48 00 00 00 19 74 45 58 74 53 6f 66 74 77 61 72 65 00 41 ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 00 00 01 00 01 00 00 ff e2 1b 1c 49 43 43 5f 50 52 4f 46 49 4c 45 00 01 01 00 00 1b 0c 61 70 70 6c 02 10 00 00 6d ...>
-<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 6a 71 75 65 72 79 27 2c 66 75 6e 63 74 69 6f 6e 28 29 7b 0a 09 28 66 75 6e 63 74 69 6f 6e 28 61 2c 62 29 7b 66 75 6e ...>
+<Buffer 2f 2a 0a 2a 66 61 73 74 65 72 20 6a 61 76 61 73 63 72 69 70 74 20 6d 6f 64 75 6c 65 20 70 61 63 6b 61 67 65 20 6d 61 6e 61 67 65 72 0a 2a 40 61 75 74 ... >
+<Buffer 2f 2a 2a 0a 2a 20 63 73 73 20 72 65 73 65 74 0a 2a 2a 2f 0a 68 74 6d 6c 2c 20 62 6f 64 79 2c 20 64 69 76 2c 20 68 31 2c 20 68 32 2c 20 68 33 2c 20 68 ... >
+<Buffer 2e 77 72 61 70 7b 0a 09 77 69 64 74 68 3a 20 39 36 30 70 78 3b 0a 7d>
+<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 70 61 67 65 2f 77 65 6c 63 6f 6d 65 27 2c 20 5b 27 6a 71 75 65 72 79 27 5d 2c 20 66 75 6e 63 74 69 6f 6e 28 72 65 ... >
+<Buffer 66 6d 6c 2e 64 65 66 69 6e 65 28 27 6a 71 75 65 72 79 27 2c 66 75 6e 63 74 69 6f 6e 28 29 7b 0a 09 28 66 75 6e 63 74 69 6f 6e 28 61 2c 62 29 7b 66 75 ... >
