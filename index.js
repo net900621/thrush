@@ -17,7 +17,37 @@ var contentType = require("./contentType");
 libFs.writeFileSync('./config/pid',process.pid);
 
 //Web服务器主函数,解析请求,返回Web内容
-var funWebSvr = function (req, res){ 
+var funWebSvr = function (req, res){
+
+	var date = new Date(),
+		dataUrl = '';
+
+	try{
+
+		if (!libFs.existsSync('/tmp/log/thrush/')) {
+
+			libFs.mkdirSync('/tmp/log/thrush/');
+
+		}
+		if (!libFs.existsSync('/tmp/log/thrush/' + date.getUTCFullYear())) {
+
+			libFs.mkdirSync('/tmp/log/thrush/' + date.getUTCFullYear());
+
+		}
+		if (!libFs.existsSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + (date.getMonth() + 1))) {
+
+			libFs.mkdirSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + (date.getMonth() + 1));
+
+		}
+
+		dataUrl = '/tmp/log/thrush/' + date.getUTCFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+
+	}catch(e){
+		console.log(e.message);
+		console.log(e.stack);
+	}
+
+	req.logUrl = dataUrl;
 
 	//获取请求的url
 	var reqUrl = req.url; 
@@ -38,9 +68,9 @@ var funWebSvr = function (req, res){
 		var _statics = './statics/' + suffixType + pathName;
 		if (libFs.existsSync(_statics)) {
 			res.writeHead(200, {"Content-Type": contentType.funGetContentType(libPath.extname(_statics).replace(/\./,'')) });
-			console.log(libFs.readFileSync(_statics));
 			res.end(libFs.readFileSync(_statics),'utf-8');
 		}else{
+			libFs.writeFileSync(req.logUrl , '404', {'encoding' : 'utf8'});
 			res.writeHead(404, {"Content-Type": "text/html"});
 			res.end("<h1>404 Not Found !</h1>");
 		}
@@ -66,6 +96,7 @@ var funWebSvr = function (req, res){
 		render200(require('./' + pathReal), req, res, pathAccess);
 	}
 	else{
+		libFs.writeFileSync(req.logUrl , '404', {'encoding' : 'utf8'});
 		res.writeHead(404, {"Content-Type": "text/html"});
 		res.end("<h1>404 Not Found !</h1>");
 	}
@@ -101,7 +132,6 @@ var webSvr = libHttp.createServer(funWebSvr);
 webSvr.on("error", function(error) { 
 	console.log(error);  //在控制台中输出错误信息
 }); 
-
 
 //开始侦听8124端口
 webSvr.listen(8124,function(){
