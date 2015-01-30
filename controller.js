@@ -56,24 +56,4 @@ exports.__create = function(module, conf){
 		return modObj;
 	}
 	
-
-	//貌似这里是为了干点啥的
-	//好像index里面能跳转别的controller的思路一出来，这里就没用了
-	//那还是放着吧，以防万一
-	/*
-	if (global.pathAccess) {
-		_path = conf.global.pathAccess;
-		_pathName = global.pathAccess;
-		global.pathAccess = '';
-	}else{
-		_pathName = 'index';
-		_path = conf.index;
-	}
-	*/
-	// module.prototype[ _pathName ] = _path;
-	// module.prototype[ _pathName ]();
-
-	// return function(module, conf){
-
-	// }
 }
