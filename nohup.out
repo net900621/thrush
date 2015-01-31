@@ -69,3 +69,44 @@ TypeError: Cannot set property 'undefined' of undefined
 [WebSvr][Start]: 88ms
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 71ms
+[ '/welcome' ]
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 287ms
+[ '/welcome' ]
+/Users/a2014-280/hetweb/thrush/controller.js:30
+					self.listenDate.forEach(function(v, index){
+					                ^
+TypeError: Object #<Object> has no method 'forEach'
+    at /Users/a2014-280/hetweb/thrush/controller.js:30:22
+    at /Users/a2014-280/hetweb/thrush/www/model/welcome.js:17:10
+    at listenFun (/Users/a2014-280/hetweb/thrush/db.js:45:15)
+    at null._onTimeout (/Users/a2014-280/hetweb/thrush/db.js:49:5)
+    at Timer.listOnTimeout (timers.js:133:15)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 71ms
+[ '/welcome' ]
+value
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 68ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 69ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 68ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 68ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 72ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 70ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 71ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 87ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 70ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 73ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 70ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 68ms

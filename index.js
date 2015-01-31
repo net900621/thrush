@@ -70,7 +70,7 @@ var funWebSvr = function (req, res){
 			res.writeHead(200, {"Content-Type": contentType.funGetContentType(libPath.extname(_statics).replace(/\./,'')) });
 			res.end(libFs.readFileSync(_statics),'utf-8');
 		}else{
-			libFs.writeFileSync(req.logUrl , '404 ' + _statics, {'encoding' : 'utf8'});
+			libFs.writeFileSync(req.logUrl , '404 ' + _statics + '\n', {'encoding' : 'utf8'});
 			res.writeHead(404, {"Content-Type": "text/html"});
 			res.end("<h1>404 Not Found !</h1>");
 		}
@@ -96,7 +96,7 @@ var funWebSvr = function (req, res){
 		render200(require('./' + pathReal), req, res, pathAccess);
 	}
 	else{
-		libFs.writeFileSync(req.logUrl , '404 ' + pathName, {'encoding' : 'utf8'});
+		libFs.writeFileSync(req.logUrl , '404 ' + pathName + '\n', {'encoding' : 'utf8'});
 		res.writeHead(404, {"Content-Type": "text/html"});
 		res.end("<h1>404 Not Found !</h1>");
 	}

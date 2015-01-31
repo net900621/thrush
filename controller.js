@@ -17,19 +17,38 @@ _controller.prototype = {
 		var _num = 0;
 		var data = {};
 		var php = this.listenDate;
+		var _php = php;
 		var self = this;
 		if (!self.listenCount ) {
 			cbk(self.listenDate);
 		};
 		for (i in php){
 			data[i] = './www/model' + php[i] + '.js';
-			require(data[i]).dbThis(function(err,dd){
-				self.listenDate[i] = dd;
+			var url = self.listenDate[i];
+			if (!libFs.existsSync(data[i])) {
+				libFs.writeFileSync(self.req.logUrl , '404 ' + self.listenDate[i] + '\n', {'encoding' : 'utf8'});
+				self.listenDate[i] = 'false';
 				self.listenCount --;
-				if (!self.listenCount ) {
-					cbk(self.listenDate);
-				};
-			});
+			}else{
+				(function(i, url){
+					require(data[i]).dbThis(function(err,dd){
+						self.listenDate[i] = dd;
+						self.listenCount --;
+						if (!self.listenCount ) {
+							for(index in self.listenDate){
+								var v = self.listenDate[index];
+								var _type = typeof(v);
+								if (_type != 'object') {
+									libFs.writeFileSync(self.req.logUrl , '404 ' + url + '\n', {'encoding' : 'utf8'});
+								}else{
+									libFs.writeFileSync(self.req.logUrl , '200 ' + url + '\n', {'encoding' : 'utf8'});
+								}
+							}
+							cbk(self.listenDate);
+						};
+					});
+				})(i, url);
+			}
 		}
 	},
 	setData : function(data){
