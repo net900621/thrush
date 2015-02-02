@@ -13,6 +13,7 @@ var querystring = require("querystring");
 global.tmp = require('./etic.js');
 global.db = require('./db.js');
 var contentType = require("./contentType");
+global.logWrite = require("./log");
 
 libFs.writeFileSync('./config/pid',process.pid);
 

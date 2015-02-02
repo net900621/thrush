@@ -35,14 +35,12 @@ _controller.prototype = {
 						self.listenDate[i] = dd;
 						self.listenCount --;
 						if (!self.listenCount ) {
-							for(index in self.listenDate){
-								var v = self.listenDate[index];
-								var _type = typeof(v);
-								if (_type != 'object') {
-									libFs.writeFileSync(self.req.logUrl , '404 ' + url + '\n', {'encoding' : 'utf8'});
-								}else{
-									libFs.writeFileSync(self.req.logUrl , '200 ' + url + '\n', {'encoding' : 'utf8'});
-								}
+							var v = self.listenDate[i];
+							var _type = typeof(v);
+							if (_type != 'object') {
+								libFs.writeFileSync(self.req.logUrl , '404 ' + url + '\n', {'encoding' : 'utf8'});
+							}else{
+								libFs.writeFileSync(self.req.logUrl , '200 ' + url + '\n', {'encoding' : 'utf8'});
 							}
 							cbk(self.listenDate);
 						};
