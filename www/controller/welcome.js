@@ -11,6 +11,7 @@ var conf = {
 		this.setData(data);
 		this.listen(function(data){
 			self.cssLink = ['welcome'];
+			data.value = data.value[0];
 			return self.render('welcome', data);
 		});
 	}

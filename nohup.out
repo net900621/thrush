@@ -116,3 +116,27 @@ value
 [WebSvr][Start]: 821ms
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 75ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 377ms
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'field list'
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 202ms
+/Users/a2014-280/hetweb/thrush/db.js:33
+		db.models[_opt.table].find(_opt.findList, function(err, rows) {
+		                      ^
+TypeError: Cannot call method 'find' of undefined
+    at callback (/Users/a2014-280/hetweb/thrush/db.js:33:25)
+    at /Users/a2014-280/hetweb/thrush/db.js:22:3
+    at Handshake._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ORM.js:130:13)
+    at Handshake.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Handshake.Sequence.OkPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:75:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+    at Protocol.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:37:16)
+    at Socket.ondata (_stream_readable.js:533:20)
+    at Socket.EventEmitter.emit (events.js:126:20)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 72ms
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'field list'
