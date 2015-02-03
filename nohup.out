@@ -140,3 +140,5 @@ TypeError: Cannot call method 'find' of undefined
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 72ms
 Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'field list'
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 332ms
