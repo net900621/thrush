@@ -62,6 +62,23 @@ function dbUpdate (self, key, _opt) {
 	doDb(self, key, callback, _opt);
 }
 
+function dbRemove (self, key, _opt) {
+	self.count ++;
+	var callback = function(db, self, key, _cbk, _opt){
+		var _self = self,
+			_key = key;
+		var MYTABLE = db.define(_opt.table, _opt.list);
+		db.models[_opt.table].find(_opt.removeList).remove(function (err) {
+    		if (err) {
+    			return console.error('Connection error: ' + err);
+    			_cbk([false], self, key);
+    		}
+			_cbk([true], self, key);
+		})
+	}
+	doDb(self, key, callback, _opt);
+}
+
 function dbInsert (self, key, _opt) {
 	self.count ++;
 	var callback = function(db, self, key, _cbk, _opt){
@@ -95,6 +112,7 @@ function dbResult (_this, fun) {
 }
 
 exports.dbFind = dbFind;
+exports.dbRemove = dbRemove;
 exports.dbUpdate = dbUpdate;
 exports.dbInsert = dbInsert;
 exports.dbResult = dbResult;

@@ -37,7 +37,16 @@ var dbThis = function(cbk){
 	        name : {type: 'text'},
 	        sex : {type: 'text'}
 	    },
-		'insertList' : [{'name': 'yaoyaook','sex':'m'}]
+		'insertList' : [{'name': 'yaoyaook1231','sex':'m'}]
+	});
+
+	db.dbRemove(this, 'update', {
+		'table' : 'MYTABLE',
+		'list' : {
+	        name : {type: 'text'},
+	        sex : {type: 'text'}
+	    },
+		'removeList' : {'name': 'yaoyaook123','sex':'m'}
 	});
 	
 	db.dbResult(this, function(_self){

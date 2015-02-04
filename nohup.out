@@ -142,3 +142,37 @@ TypeError: Cannot call method 'find' of undefined
 Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'field list'
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 332ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 421ms
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Utilities.js:318
+			item[0] = properties[item[0]].mapsTo;
+			                             ^
+TypeError: Cannot read property 'mapsTo' of undefined
+    at Object.exports.transformOrderPropertyNames (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Utilities.js:318:33)
+    at ChainFind.prepareOrder (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:16:20)
+    at Object.ChainFind.chain.remove (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:109:14)
+    at callback (/Users/a2014-280/hetweb/thrush/db.js:71:47)
+    at /Users/a2014-280/hetweb/thrush/db.js:22:3
+    at Handshake._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ORM.js:130:13)
+    at Handshake.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Handshake.Sequence.OkPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:75:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 72ms
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Utilities.js:318
+			item[0] = properties[item[0]].mapsTo;
+			                             ^
+TypeError: Cannot read property 'mapsTo' of undefined
+    at Object.exports.transformOrderPropertyNames (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/Utilities.js:318:33)
+    at ChainFind.prepareOrder (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:16:20)
+    at Object.ChainFind.chain.remove (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:109:14)
+    at callback (/Users/a2014-280/hetweb/thrush/db.js:71:47)
+    at /Users/a2014-280/hetweb/thrush/db.js:22:3
+    at Handshake._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ORM.js:130:13)
+    at Handshake.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Handshake.Sequence.OkPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:75:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 71ms
