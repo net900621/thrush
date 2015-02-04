@@ -176,3 +176,5 @@ TypeError: Cannot read property 'mapsTo' of undefined
     at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 71ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 271ms
