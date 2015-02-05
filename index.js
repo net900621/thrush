@@ -35,13 +35,18 @@ var funWebSvr = function (req, res){
 			libFs.mkdirSync('/tmp/log/thrush/' + date.getUTCFullYear());
 
 		}
-		if (!libFs.existsSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + (date.getMonth() + 1))) {
 
-			libFs.mkdirSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + (date.getMonth() + 1));
+		var monthValue = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : '' + (date.getMonth() + 1);
+		
+		if (!libFs.existsSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + monthValue)) {
+
+			libFs.mkdirSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + monthValue);
 
 		}
 
-		dataUrl = '/tmp/log/thrush/' + date.getUTCFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+		var dayValue = date.getDate() < 10 ? '0' + date.getDate() : '' + date.getDate();
+
+		dataUrl = '/tmp/log/thrush/' + date.getUTCFullYear() + '/' + monthValue + '/' + dayValue;
 
 	}catch(e){
 		console.log(e.message);

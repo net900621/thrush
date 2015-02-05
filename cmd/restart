@@ -11,6 +11,11 @@ stopService(){
 startService(){
 	cd $basepath
 	nohup node $basepath'index.js'&
+	mkdir '/tmp/log/thrush/'
+	mkdir '/tmp/log/thrush/'`date +%Y`
+	mkdir '/tmp/log/thrush/'`date +%Y/%m`
+	echo '' >  '/tmp/log/thrush/'`date +%Y/%m/%d`
+	echo '/tmp/log/thrush/'`date +%Y/%m/%d`
 }
 if [ $# -eq 0 ];then
 	echo "you should pass args start|restart|stop"	
