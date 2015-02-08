@@ -11,6 +11,7 @@ stopService(){
 startService(){
 	cd $basepath
 	nohup node $basepath'index.js'&
+	mkdir '/tmp/log/'
 	mkdir '/tmp/log/thrush/'
 	mkdir '/tmp/log/thrush/'`date +%Y`
 	mkdir '/tmp/log/thrush/'`date +%Y/%m`

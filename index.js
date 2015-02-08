@@ -69,14 +69,14 @@ var funWebSvr = function (req, res){
 		}else if (suffix[1] == 'jpg' || suffix[1] == 'png' || suffix[1] == 'gif') {
 			suffixType = 'img';
 		}else{
-			suffixType = 'suffix[1]';
+			suffixType = suffix[1];
 		}
 		var _statics = './statics/' + suffixType + pathName;
 		if (libFs.existsSync(_statics)) {
 			res.writeHead(200, {"Content-Type": contentType.funGetContentType(libPath.extname(_statics).replace(/\./,'')) });
 			res.end(libFs.readFileSync(_statics),'utf-8');
 		}else{
-			libFs.writeFileSync(req.logUrl , '404 ' + _statics + '\n', {'encoding' : 'utf8'});
+			logWrite.logShow(req.logUrl, _statics, (new Date()).toLocaleTimeString(), 404);
 			res.writeHead(404, {"Content-Type": "text/html"});
 			res.end("<h1>404 Not Found !</h1>");
 		}
@@ -102,7 +102,7 @@ var funWebSvr = function (req, res){
 		render200(require('./' + pathReal), req, res, pathAccess);
 	}
 	else{
-		libFs.writeFileSync(req.logUrl , '404 ' + pathName + '\n', {'encoding' : 'utf8'});
+		logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 404);
 		res.writeHead(404, {"Content-Type": "text/html"});
 		res.end("<h1>404 Not Found !</h1>");
 	}
@@ -113,21 +113,27 @@ var render200 = function(model, req, res, pathAccess){
 	var modObj = new model.__create();
 	modObj.res = res;
 	modObj.req = req;
-	if (pathAccess.length) {
-		var _value = '';
-		if (pathAccess.length > 1) {
-			_value = pathAccess[1];
-		};
-		if (modObj[pathAccess[0]]) {
-			modObj[pathAccess[0]](_value);
-		}else if (!_value){
-			modObj['index'](pathAccess[0]);
+	try{
+		a.b.c.d = 1;
+		if (pathAccess.length) {
+			var _value = '';
+			if (pathAccess.length > 1) {
+				_value = pathAccess[1];
+			};
+			if (modObj[pathAccess[0]]) {
+				modObj[pathAccess[0]](_value);
+			}else if (!_value){
+				modObj['index'](pathAccess[0]);
+			}else{
+				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 404);
+				res.writeHead(404, {"Content-Type": "text/html"});
+				res.end("<h1>404 Not Found !</h1>");
+			}
 		}else{
-			res.writeHead(404, {"Content-Type": "text/html"});
-			res.end("<h1>404 Not Found !</h1>");
+			modObj['index']();
 		}
-	}else{
-		modObj['index']();
+	}catch(ex){
+		logWrite.error(req.logUrl, ex.stack);
 	}
 }
 
