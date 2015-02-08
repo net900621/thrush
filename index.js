@@ -73,6 +73,7 @@ var funWebSvr = function (req, res){
 		}
 		var _statics = './statics/' + suffixType + pathName;
 		if (libFs.existsSync(_statics)) {
+			logWrite.logShow(req.logUrl, _statics, (new Date()).toLocaleTimeString(), 200);
 			res.writeHead(200, {"Content-Type": contentType.funGetContentType(libPath.extname(_statics).replace(/\./,'')) });
 			res.end(libFs.readFileSync(_statics),'utf-8');
 		}else{
@@ -120,8 +121,10 @@ var render200 = function(model, req, res, pathAccess){
 				_value = pathAccess[1];
 			};
 			if (modObj[pathAccess[0]]) {
+				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 200);
 				modObj[pathAccess[0]](_value);
 			}else if (!_value){
+				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 200);
 				modObj['index'](pathAccess[0]);
 			}else{
 				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 404);

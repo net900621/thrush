@@ -205,3 +205,63 @@ true
 [WebSvr][Start]: 68ms
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 68ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 73ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 73ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 69ms
+./statics/js/fml.js
+./statics/css/base.css
+./statics/css/show.css
+./statics/img/logo.png
+./statics/img/name.png
+./statics/img/head.png
+./statics/img/cubeFind.png
+./statics/img/znm.png
+./statics/img/ground.png
+./statics/img/shake.png
+./statics/js/page/show.js
+./statics/img/circular.png
+./statics/img/pt.png
+./statics/img/whiteBlock.png
+./statics/img/basketball.png
+./statics/img/diamond.png
+./statics/img/wood.png
+./statics/img/1024.png
+./statics/img/gravity.png
+./statics/img/football.png
+./statics/img/color.png
+./statics/img/close.png
+./statics/img/bubble.png
+./statics/img/cssFilter.png
+./statics/img/continue.png
+./statics/js/jquery.js
+./statics/js/fml.js
+./statics/css/base.css
+./statics/css/show.css
+./statics/img/logo.png
+./statics/img/name.png
+./statics/img/head.png
+./statics/img/cubeFind.png
+./statics/img/znm.png
+./statics/img/ground.png
+./statics/img/shake.png
+./statics/img/pt.png
+./statics/img/whiteBlock.png
+./statics/img/basketball.png
+./statics/img/diamond.png
+./statics/js/page/show.js
+./statics/img/circular.png
+./statics/img/wood.png
+./statics/img/1024.png
+./statics/img/gravity.png
+./statics/img/football.png
+./statics/img/color.png
+./statics/img/close.png
+./statics/img/bubble.png
+./statics/img/cssFilter.png
+./statics/img/continue.png
+./statics/js/jquery.js
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 70ms

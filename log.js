@@ -1,9 +1,9 @@
 var logShow = function(logUrl, data, time, type){
-	libFs.writeFileSync(logUrl , type + ' ' + time + ' ' + data + '\n', {'encoding' : 'utf8'});
+	libFs.appendFileSync(logUrl , type + ' ' + time + ' ' + data + '\n', {'encoding' : 'utf8'});
 }
 
 var error = function(logUrl, data){
-	libFs.writeFileSync(logUrl ,data + '\n', {'encoding' : 'utf8'});
+	libFs.appendFileSync(logUrl ,data + '\n', {'encoding' : 'utf8'});
 }
 
 exports.error = error;
