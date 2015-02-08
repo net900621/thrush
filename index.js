@@ -114,7 +114,6 @@ var render200 = function(model, req, res, pathAccess){
 	modObj.res = res;
 	modObj.req = req;
 	try{
-		a.b.c.d = 1;
 		if (pathAccess.length) {
 			var _value = '';
 			if (pathAccess.length > 1) {
