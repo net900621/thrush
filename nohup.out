@@ -267,3 +267,21 @@ true
 [WebSvr][Start]: 70ms
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 319ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 271ms
+true
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 76ms
+/Users/a2014-280/hetweb/thrush/www/model/insert.js:5
+	var name = self.req.__post.name;
+	                          ^
+TypeError: Cannot read property 'name' of undefined
+    at Object.dbThis (/Users/a2014-280/hetweb/thrush/www/model/insert.js:5:28)
+    at /Users/a2014-280/hetweb/thrush/controller.js:34:23
+    at _controller.listen (/Users/a2014-280/hetweb/thrush/controller.js:48:7)
+    at conf.insert (/Users/a2014-280/hetweb/thrush/www/controller/show.js:27:8)
+    at exeMod (/Users/a2014-280/hetweb/thrush/index.js:128:27)
+    at IncomingMessage.<anonymous> (/Users/a2014-280/hetweb/thrush/index.js:157:14)
+    at IncomingMessage.EventEmitter.emit (events.js:101:17)
+    at _stream_readable.js:895:16
+    at process._tickCallback (node.js:339:11)

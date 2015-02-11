@@ -139,6 +139,8 @@ var render200 = function(model, req, res, pathAccess, pathName){
 			}
 		}
 
+		modObj.res.__get = {};
+		modObj.res.__post = {};
 		if(req.method == "GET"){
 	        var params = [];
 	        params = libUrl.parse(req.url,true).query;
