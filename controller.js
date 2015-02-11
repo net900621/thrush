@@ -44,7 +44,7 @@ _controller.prototype = {
 							}
 							cbk(self.listenDate);
 						};
-					});
+					},self);
 				})(i, url);
 			}
 		}
@@ -56,6 +56,9 @@ _controller.prototype = {
 			this.listenCount ++;
 		}
 		this.listenDate = data;
+	},
+	ajaxTo : function(){
+
 	}
 }
 exports.__create = function(module, conf){

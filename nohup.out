@@ -265,3 +265,5 @@ true
 ./statics/js/jquery.js
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 70ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 319ms

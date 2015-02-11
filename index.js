@@ -57,6 +57,7 @@ var funWebSvr = function (req, res){
 
 	//获取请求的url
 	var reqUrl = req.url; 
+
 	//使用url解析模块获取url中的路径名
 	var pathName = libUrl.parse(reqUrl).pathname;
 	var suffix = pathName.match(/\.([^\/]*$)/);
@@ -92,15 +93,15 @@ var funWebSvr = function (req, res){
 	var pathAccess = [];
 	if (libFs.existsSync(pathArr[0])) {
 		pathReal = pathArr[0];
-		render200(require('./' + pathReal), req, res, pathAccess);
+		render200(require('./' + pathReal), req, res, pathAccess, pathName);
 	}else if (libFs.existsSync(pathArr[1])){
 		pathReal = pathArr[1];
 		pathAccess = [pathClear.match(/\/[^\/]+$/)[0].replace(/\//g, '')];
-		render200(require('./' + pathReal), req, res, pathAccess);
+		render200(require('./' + pathReal), req, res, pathAccess, pathName);
 	}else if (libFs.existsSync(pathArr[2])){
 		pathReal = pathArr[2];
 		pathAccess = pathClear.match(/\/[^\/]+\/[^\/]+$/)[0].replace(/^\/|\/$/g, '').split(/\//);
-		render200(require('./' + pathReal), req, res, pathAccess);
+		render200(require('./' + pathReal), req, res, pathAccess, pathName);
 	}
 	else{
 		logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 404);
@@ -110,30 +111,55 @@ var funWebSvr = function (req, res){
 
 }
 
-var render200 = function(model, req, res, pathAccess){
+var render200 = function(model, req, res, pathAccess, pathName){
 	var modObj = new model.__create();
 	modObj.res = res;
 	modObj.req = req;
 	try{
-		if (pathAccess.length) {
-			var _value = '';
-			if (pathAccess.length > 1) {
-				_value = pathAccess[1];
-			};
-			if (modObj[pathAccess[0]]) {
-				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 200);
-				modObj[pathAccess[0]](_value);
-			}else if (!_value){
-				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 200);
-				modObj['index'](pathAccess[0]);
+
+		var exeMod = function(){
+			if (pathAccess.length) {
+				var _value = '';
+				if (pathAccess.length > 1) {
+					_value = pathAccess[1];
+				};
+				if (modObj[pathAccess[0]]) {
+					logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 200);
+					modObj[pathAccess[0]](_value);
+				}else if (!_value){
+					logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 200);
+					modObj['index'](pathAccess[0]);
+				}else{
+					logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 404);
+					res.writeHead(404, {"Content-Type": "text/html"});
+					res.end("<h1>404 Not Found !</h1>");
+				}
 			}else{
-				logWrite.logShow(req.logUrl, pathName, (new Date()).toLocaleTimeString(), 404);
-				res.writeHead(404, {"Content-Type": "text/html"});
-				res.end("<h1>404 Not Found !</h1>");
+				modObj['index']();
 			}
-		}else{
-			modObj['index']();
 		}
+
+		if(req.method == "GET"){
+	        var params = [];
+	        params = libUrl.parse(req.url,true).query;
+	        modObj.res.__get = params;
+	        exeMod();
+	    }else if(req.method == "POST"){
+	        var postdata = "";
+	        req.addListener("data",function(postchunk){
+	            postdata += postchunk;
+	        })
+
+	        //POST结束输出结果
+	        req.addListener("end",function(){
+	            var params = querystring.parse(postdata);
+	            modObj.res.__post = params;
+	            exeMod();
+	        })
+	    }else{
+	    	exeMod();
+	    }
+
 	}catch(ex){
 		logWrite.error(req.logUrl, ex.stack);
 	}

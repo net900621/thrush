@@ -1,19 +1,19 @@
-var dbThis = function(cbk){
+var dbThis = function(cbk, self){
 	var _self = this;
 	this.stack = {};
 	this.count = 0;
-
-	db.dbFind(this, 'find', {
+	var name = self.req;
+	db.dbInsert(this, 'update', {
 		'table' : 'MYTABLE',
 		'list' : {
 	        name : {type: 'text'},
 	        sex : {type: 'text'}
 	    },
-		'findList' : {'name': 'yaoyao'}
+		'insertList' : [{'name': 'I','sex':'m'}]
 	});
 	
 	db.dbResult(this, function(_self){
-		return cbk(null ,_self.stack.find);
+		return cbk(null ,_self.stack.update);
 	});
 
 }
