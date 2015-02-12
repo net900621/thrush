@@ -57,8 +57,14 @@ _controller.prototype = {
 		}
 		this.listenDate = data;
 	},
-	ajaxTo : function(){
-
+	ajaxTo : function(data){
+		var self = this;
+		this.setData(data);
+		this.listen(function(data){
+			data = JSON.stringify(data);
+			self.res.writeHead(200, {"Content-Type": "application/json" });
+			self.res.end(data, "utf8");
+		});
 	}
 }
 exports.__create = function(module, conf){

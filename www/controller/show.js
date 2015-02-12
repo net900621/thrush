@@ -21,16 +21,8 @@ var conf = {
 		});
 	},
 	'insert' : function(){
-		var data = {'list' : '/insert'},
-			self = this;
-		this.setData(data);
-		this.listen(function(data){
-			console.log(data)
-			data = JSON.stringify(data[1]);
-			console.log(data);
-			self.res.writeHead(200, {"Content-Type": "application/json" });
-			self.res.end(data, "utf8");
-		});
-	},
+		var data = {'list' : '/insert'};
+		this.ajaxTo(data);
+	}
 };
 exports.__create = controller.__create(show, conf);

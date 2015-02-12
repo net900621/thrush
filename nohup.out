@@ -285,3 +285,34 @@ TypeError: Cannot read property 'name' of undefined
     at IncomingMessage.EventEmitter.emit (events.js:101:17)
     at _stream_readable.js:895:16
     at process._tickCallback (node.js:339:11)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 410ms
+true
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 323ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 72ms
+undefined
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 71ms
+{ list: true }
+undefined
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 77ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 75ms
+/Users/a2014-280/hetweb/thrush/controller.js:62
+		this.setData(data);
+		             ^
+ReferenceError: data is not defined
+    at _controller.ajaxTo (/Users/a2014-280/hetweb/thrush/controller.js:62:16)
+    at conf.insert (/Users/a2014-280/hetweb/thrush/www/controller/show.js:26:8)
+    at exeMod (/Users/a2014-280/hetweb/thrush/index.js:128:27)
+    at IncomingMessage.<anonymous> (/Users/a2014-280/hetweb/thrush/index.js:159:14)
+    at IncomingMessage.EventEmitter.emit (events.js:101:17)
+    at _stream_readable.js:895:16
+    at process._tickCallback (node.js:339:11)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 78ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 79ms
