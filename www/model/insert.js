@@ -2,8 +2,8 @@ var dbThis = function(cbk, self){
 	var _self = this;
 	this.stack = {};
 	this.count = 0;
-	var name = self.req.client._httpMessage.__post.name || '',
-		sex = self.req.client._httpMessage.__post.sex || '';
+	var name = self.req.__post.name || '',
+		sex = self.req.__post.sex || '';
 	db.dbInsert(this, 'update', {
 		'table' : 'MYTABLE',
 		'list' : {

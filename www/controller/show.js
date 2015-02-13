@@ -21,7 +21,8 @@ var conf = {
 		});
 	},
 	'insert' : function(){
-		var data = {'list' : '/insert'};
+		console.log(this.req.__post)
+		var data = {'date' : '/insert'};
 		this.ajaxTo(data);
 	}
 };

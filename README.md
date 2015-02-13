@@ -21,6 +21,10 @@ nodejs语法，前后端协同。
 
 ##用法
 
+###首先
+
+	在www下创建tmp文件夹，不过其实可以直接通过cmd文件夹下的restart脚本自动创建
+
 ###controller写法
 
 	在www/controller目录下，建立相对应路由
@@ -58,7 +62,7 @@ nodejs语法，前后端协同。
 	'insert' : function(){
 		var data = {'list' : '/insert'};
 		this.ajaxTo(data);
-	}
+	}	
 
 ###model写法
 
@@ -122,6 +126,10 @@ nodejs语法，前后端协同。
 	在最后会输出一行类似/tmp/log/thrush/2015/02/12的路径
 	这个路径就是日志输出地点
 	
+###参数
+
+	get => this.req.__get
+	post => this.req.__post
 
 ##感谢
 

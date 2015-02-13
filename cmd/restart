@@ -15,6 +15,7 @@ startService(){
 	mkdir '/tmp/log/thrush/'
 	mkdir '/tmp/log/thrush/'`date +%Y`
 	mkdir '/tmp/log/thrush/'`date +%Y/%m`
+	mkdir $basepath'www/tmp/'
 	echo '' >  '/tmp/log/thrush/'`date +%Y/%m/%d`
 	echo '/tmp/log/thrush/'`date +%Y/%m/%d`
 }
