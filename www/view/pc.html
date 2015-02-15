@@ -1,5 +1,8 @@
 <%# header.html #%>
-
+<% this.pc_show.forEach(function(v , i){ %>
+<%= v.name%>
+<br/>
+<%});%>
 <%
 	fml.use('page/pc');
 %>

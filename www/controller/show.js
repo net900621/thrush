@@ -12,10 +12,11 @@ var conf = {
 		});
 	},
 	'pc' : function(){
-		var data = {'list' : '/pc'},
+		var data = {'pc_show' : '/pc_show'},
 			self = this;
 		this.setData(data);
 		this.listen(function(data){
+			console.log(data)
 			self.cssLink = ['pc'];
 			return self.render('pc', data);
 		});

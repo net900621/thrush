@@ -2,7 +2,7 @@ var orm = require("orm");
 
 var opt = {
     host:     'localhost',
-    database: 'MYSQLDATA',
+    database: 'lark',
     user:     'root',
     password: '',
     protocol: 'mysql'
@@ -10,7 +10,7 @@ var opt = {
 
 var _cbk = function(data, self, key){
 	self.count --;
-	self.stack[key] = data[0];
+	self.stack[key] = data;
 	return false;
 }
 

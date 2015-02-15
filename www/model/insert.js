@@ -3,14 +3,18 @@ var dbThis = function(cbk, self){
 	this.stack = {};
 	this.count = 0;
 	var name = self.req.__post.name || '',
-		sex = self.req.__post.sex || '';
+		url = self.req.__post.url || '',
+		er = self.req.__post.er || '',
+		img = self.req.__post.img || '';
 	db.dbInsert(this, 'update', {
-		'table' : 'MYTABLE',
+		'table' : 'lark_show',
 		'list' : {
 	        name : {type: 'text'},
-	        sex : {type: 'text'}
+	        url : {type: 'text'},
+	        er : {type: 'text'},
+	        img : {type: 'text'}
 	    },
-		'insertList' : [{'name': name,'sex':sex}]
+		'insertList' : [{'name': name,'url':url,'er':er,'img':img}]
 	});
 	
 	db.dbResult(this, function(_self){
