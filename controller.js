@@ -31,8 +31,6 @@ _controller.prototype = {
 				self.listenCount --;
 			}else{
 				(function(i, url){
-					self.req.__post = self.req.client._httpMessage.__post;
-					self.req.__get = self.req.client._httpMessage.__get;
 					require(data[i]).dbThis(function(err,dd){
 						self.listenDate[i] = dd;
 						self.listenCount --;

@@ -21,7 +21,6 @@ var conf = {
 		});
 	},
 	'insert' : function(){
-		console.log(this.req.__post)
 		var data = {'date' : '/insert'};
 		this.ajaxTo(data);
 	}

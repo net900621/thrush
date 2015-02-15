@@ -139,12 +139,13 @@ var render200 = function(model, req, res, pathAccess, pathName){
 			}
 		}
 
-		modObj.res.__get = {};
-		modObj.res.__post = {};
+		modObj.req.__get = {};
+		modObj.req.__post = {};
+	
 		if(req.method == "GET"){
 	        var params = [];
 	        params = libUrl.parse(req.url,true).query;
-	        modObj.res.__get = params;
+	        modObj.req.__get = params;
 	        exeMod();
 	    }else if(req.method == "POST"){
 	        var postdata = "";
@@ -155,7 +156,7 @@ var render200 = function(model, req, res, pathAccess, pathName){
 	        //POST结束输出结果
 	        req.addListener("end",function(){
 	            var params = querystring.parse(postdata);
-	            modObj.res.__post = params;
+	            modObj.req.__post = params;
 	            exeMod();
 	        })
 	    }else{
