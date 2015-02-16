@@ -1,8 +1,9 @@
-fml.define('page/pc_add', ['jquery'], function(require, exports) {
+fml.define('page/pc_add', ['jquery' , 'common/QRCode'], function(require, exports) {
 	var $form = $('.form_info')
 		,$msg = $('.error')
 		,data = {}
 		,url_reg = /http:\/\/[\w-]*(\.[\w-]*)+/ig
+		,QRCode = require('common/QRCode');
 
 	$form.on('click', '.fm_sub', function(event) {
 		$msg.hide();
@@ -18,8 +19,14 @@ fml.define('page/pc_add', ['jquery'], function(require, exports) {
 			$msg.html('URL格式错误').show();
 			return;
 		}
-
-		alert('提交'); return;
+		$('#qrcode_c').html('')
+		var qrcode = new QRCode(qrcode_c, {  
+	        width : 100,  
+	        height : 100  
+	    });
+	    qrcode.makeCode(data.url);
+		data.er = $('#qrcode_c').find('img').attr('src');
+		// alert('提交'); return;
 		$.post('/show/insert',data,function(){
 			alert('提交成功')
 		})
