@@ -1,17 +1,17 @@
 <%# header.html #%>
 <div class="wrap">
 	<!-- 轮播图 -->
-	<%if(this.pc_show){ %>
+	<%if(this.banner){ %>
 	<section id="banner">
 		<ul class="banner-slider-wrap">
-			<% this.pc_show.map(function(v,k){ %>
+			<% this.banner.map(function(v,k){ %>
 			<li ahref="<%= v.url %>">
 				<a href="<%= v.url || 'javascript:;'%>" target="_blank"><img src="<%= v.img%>"/></a>
 			</li>
 			<%});%>
 		</ul>
 		<ol class="banner-slider-point">
-			<% this.pc_show.map(function(v,k){ %>
+			<% this.banner.map(function(v,k){ %>
 			<li><%= k+1 %></li>
 			<%});%>
 		</ol>
@@ -32,7 +32,7 @@
 					<a href="<%= v.url %>" target="_blank"><img src="<%= v.img%>" alt=""></a>
 				</dt>
 				<dd>
-					<img class="er" src="<%= v.er %>" alt="">
+					<div class="er"></div>
 				</dd>
 			</dl>
 		<%});%>
@@ -42,8 +42,7 @@
 	
 </div>
 <img src=""/ id="qrcode_c">
-<%
+<%	
 	fml.use('page/pc');
-	fml.use('page/banner');
 %>
 <%# footer.html #%>

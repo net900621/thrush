@@ -16,6 +16,8 @@ var conf = {
 			self = this;
 		this.setData(data);
 		this.listen(function(data){
+			data.banner = data.pc_show.slice(-5);
+			console.log(data)
 			self.cssLink = ['pc'];
 			return self.render('pc', data);
 		});
