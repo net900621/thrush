@@ -1,0 +1,26 @@
+<%# header.html #%>
+<div class="wrap">
+	<h1>游戏信息录入</h1>
+	<fieldset class="form_info">
+		<div> 
+			<label for="pro_name">项目名称：</label>
+			<input type="text" class="form_control" name="name" id="name">
+		</div>
+		<div>
+			<label for="url">项目URL：</label>
+			<input type="text" class="form_control" name="url" id="url">
+		</div>
+		<div>
+			<label for="img">图片URL：</label>
+			<input type="text" class="form_control" name="img" id="img">
+		</div>
+		<p class="error"></p>
+		<p class="ipt"><input type="submit" class="fm_sub" value="提 交"/></p>
+
+	</fieldset>
+</div>
+
+<%
+	fml.use('page/pc_add');
+%>
+<%# footer.html #%>

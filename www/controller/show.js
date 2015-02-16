@@ -16,9 +16,17 @@ var conf = {
 			self = this;
 		this.setData(data);
 		this.listen(function(data){
-			console.log(data)
 			self.cssLink = ['pc'];
 			return self.render('pc', data);
+		});
+	},
+	'pc_add' : function(){
+		var data = {},
+			self = this;
+		this.setData(data);
+		this.listen(function(data){
+			self.cssLink = ['pc_add'];
+			return self.render('pc_add', data);
 		});
 	},
 	'insert' : function(){

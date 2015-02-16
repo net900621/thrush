@@ -1,9 +1,49 @@
 <%# header.html #%>
-<% this.pc_show.forEach(function(v , i){ %>
-<%= v.name%>
-<br/>
-<%});%>
+<div class="wrap">
+	<!-- 轮播图 -->
+	<%if(this.pc_show){ %>
+	<section id="banner">
+		<ul class="banner-slider-wrap">
+			<% this.pc_show.map(function(v,k){ %>
+			<li ahref="<%= v.url %>">
+				<a href="<%= v.url || 'javascript:;'%>" target="_blank"><img src="<%= v.img%>"/></a>
+			</li>
+			<%});%>
+		</ul>
+		<ol class="banner-slider-point">
+			<% this.pc_show.map(function(v,k){ %>
+			<li><%= k+1 %></li>
+			<%});%>
+		</ol>
+	</section>
+	<%}%>
+	<article class="proInfo">
+		<h2>项目介绍</h2>
+		<p>thrush项目是不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉thrush项目是不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉thrush项目是不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉thrush项目是不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉不拉</p>
+	</article>
+
+	<section class="proList">
+		<h1>Thrush-游戏列表</h1>
+		<div class="lists">
+		<% this.pc_show.forEach(function(v , i){ %>
+			<dl class="listInfo">
+				<dt>
+					<h2><%= v.name%></h2>
+					<a href="<%= v.url %>" target="_blank"><img src="<%= v.img%>" alt=""></a>
+				</dt>
+				<dd>
+					<img src="<%= v.er %>" alt="">
+				</dd>
+			</dl>
+		<%});%>
+		</div>
+		
+	</section>
+	
+</div>
+
 <%
 	fml.use('page/pc');
+	fml.use('page/banner');
 %>
 <%# footer.html #%>

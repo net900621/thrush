@@ -20,3 +20,7 @@ body{ background-color: #f2f0f0; color: #666; font-size: 12px; font-family: Aria
 .clear_f{
 	clear: both; overflow:hidden; height:0px; 
 }
+
+header{
+	background-color: #f16d4d; text-align: center;
+}
