@@ -1,13 +1,13 @@
 fml.define('page/pc', ['jquery' , 'common/QRCode'], function(require, exports) {
 	var QRCode = require('common/QRCode'),
 		list = $('.listInfo');
-	list.forEach(function(v, i){
+	list.each(function(i,v){
 		$('#qrcode_c').html('')
-		var qr = v.find('.er');
-		var qrcode = new QRCode(qr, {  
+		var qr = $(v).find('.er');
+		var qrcode = new QRCode(qr[0], {  
 	        width : qr.width(),  
 	        height : qr.height()  
 	    });
-	    qrcode.makeCode(v.find('a').attr('href'));
+	    qrcode.makeCode($(v).find('a').attr('href'));
 	});
 });

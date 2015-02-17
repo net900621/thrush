@@ -5743,3 +5743,4 @@ undefined
        img: [Getter/Setter],
        id: [Getter/Setter] } ] }
 { [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
+{ [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
