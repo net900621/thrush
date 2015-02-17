@@ -5,6 +5,7 @@ img{vertical-align: top;}
 
 #banner{width: 560px;height: 240px;position: relative;overflow: hidden; float: left;}
 ul.banner-slider-wrap{position: absolute; width: 470px; left: 0; top: 0; z-index: 1;}
+ul.banner-slider-wrap > li{display: inline-block; height: 240px; overflow: hidden;}
 
 ol.banner-slider-point{position: absolute; right: 10px; bottom: 4px; z-index: 2;}
 ol.banner-slider-point > li{float: left; padding:0 8px; margin: 4px; background: #fff; color: #f60; text-align: center; vertical-align: middle; line-height: 20px;}
@@ -20,6 +21,7 @@ ol.banner-slider-point > li.active{background: #f60; color: #fff;}
 
 .listInfo{padding-bottom: 30px; overflow: hidden;}
 .listInfo > dt{float: left; height: 280px;}
-.listInfo > dt > a{display: block; max-width: 550px; height: 240px; overflow: hidden;}
+.listInfo > dt > a{display: block; max-width: 540px; height: 240px; overflow: hidden;}
 .listInfo > dd{float: right; padding-top: 50px; margin-right:60px; }
+.er{width: 200px;}
 /*.listInfo > dd > img{  }*/
