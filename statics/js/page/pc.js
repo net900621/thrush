@@ -1,7 +1,7 @@
 fml.define('page/pc', ['jquery' , 'common/QRCode'], function(require, exports) {
 	var QRCode = require('common/QRCode'),
 		list = $('.listInfo');
-	list.forEach(function(v, i){debugger;
+	list.forEach(function(v, i){
 		$('#qrcode_c').html('')
 		var qr = v.find('.er');
 		var qrcode = new QRCode(qr, {  
