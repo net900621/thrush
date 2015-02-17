@@ -5,8 +5,8 @@ fml.define('page/pc', ['jquery' , 'common/QRCode'], function(require, exports) {
 		$('#qrcode_c').html('')
 		var qr = $(v).find('.er');
 		var qrcode = new QRCode(qr[0], {  
-	        width : qr.width(),  
-	        height : qr.height()  
+	        width : 200,  
+	        height : 200
 	    });
 	    qrcode.makeCode($(v).find('a').attr('href'));
 	});
