@@ -11,3 +11,4 @@ fml.define('page/pc', ['jquery' , 'common/QRCode'], function(require, exports) {
 	    qrcode.makeCode($(v).find('a').attr('href'));
 	});
 });
+fml.use('page/banner');
