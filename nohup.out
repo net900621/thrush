@@ -5744,3 +5744,74 @@ undefined
        id: [Getter/Setter] } ] }
 { [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
 { [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 478ms
+{ pc_show: 
+   [ { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] } ],
+  banner: 
+   [ { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] },
+     { name: [Getter/Setter],
+       url: [Getter/Setter],
+       er: [Getter/Setter],
+       img: [Getter/Setter],
+       id: [Getter/Setter] } ] }
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 298ms
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'uesr' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'uesr' in 'field list'
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 235ms
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'user' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'user' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'user' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'user' in 'field list'
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 736ms

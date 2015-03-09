@@ -31,8 +31,21 @@ var conf = {
 			return self.render('pc_add', data);
 		});
 	},
+	'pm' : function(){
+		var data = {},
+			self = this;
+		this.setData(data);
+		this.listen(function(data){
+			self.cssLink = ['pc_add'];
+			return self.render('pm', data);
+		});
+	},
 	'insert' : function(){
 		var data = {'date' : '/insert'};
+		this.ajaxTo(data);
+	},
+	'insertPm' : function(){
+		var data = {'date' : '/insertPm'};
 		this.ajaxTo(data);
 	}
 };
