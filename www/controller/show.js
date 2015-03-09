@@ -40,6 +40,15 @@ var conf = {
 			return self.render('pm', data);
 		});
 	},
+	'pmList' : function(){
+		var data = {'pm' : '/pm'},
+			self = this;
+		this.setData(data);
+		this.listen(function(data){
+			self.cssLink = ['pc_list'];
+			return self.render('pmList', data);
+		});
+	},
 	'insert' : function(){
 		var data = {'date' : '/insert'};
 		this.ajaxTo(data);

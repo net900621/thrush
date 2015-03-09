@@ -5815,3 +5815,21 @@ Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'user' in 'field lis
 Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'user' in 'field list'
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 736ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 252ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 860ms
+[TypeError: Cannot call method 'forEach' of undefined]
+{}
+[TypeError: Cannot call method 'forEach' of undefined]
+{}
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 912ms
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'dec' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'dec' in 'field list'
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 932ms
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'dec' in 'field list'
+Connection error: Error: ER_BAD_FIELD_ERROR: Unknown column 'dec' in 'field list'
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 807ms

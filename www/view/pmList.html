@@ -1,0 +1,29 @@
+<%# header.html #%>
+<div class="wrap">
+	<section class="proList">
+		<h1>Thrush-需求列表</h1>
+		<table>
+			<tr>
+				<th>需求</th>
+				<th>需求描述</th>
+				<th>需求人</th>
+			</tr>
+			<% this.pm.forEach(function(v , i){ %>
+			<tr>
+				<td><%= v.name%></td>
+				<td><%= v.des%></td>
+				<td><%= v.pm%></td>
+			</tr>
+			<%});%>
+		</table>
+		
+		</div>
+		
+	</section>
+	
+</div>
+<img src=""/ id="qrcode_c">
+<%	
+	fml.use('page/pc');
+%>
+<%# footer.html #%>
