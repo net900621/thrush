@@ -1,0 +1,12 @@
+h1{line-height: 50px; margin: 0 auto;}
+h2{line-height: 40px;}
+img{vertical-align: top;}
+.wrap{width: 960px; margin: 0 auto; padding-top: 15px;padding-bottom: 15px;position: relative}
+table{
+	width: 960px;
+	margin: 0 auto;
+}
+table tr td{
+	text-align: center;
+}
+.proList:before{clear:both; content:".";  display: block;visibility: hidden; height: 10px;}
