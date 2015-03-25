@@ -185,3 +185,7 @@ webSvr.listen(8124,function(){
 	//结束服务启动计时器并输出
 	console.timeEnd('[WebSvr][Start]');
 });
+
+var watcher = require("./watchFile.js");
+var absDir = __dirname.replace(/\\/g,'/');
+watcher.takeCare([absDir] );
