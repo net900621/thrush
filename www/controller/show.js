@@ -57,7 +57,10 @@ var conf = {
 		this.ajaxTo(data);
 	},
 	'pcTest' : function(){
-		var data = {'pc_show' : '/circle/recommend_follow_users'},
+		var data = {
+			'pc_show' : '/circle/recommend_follow_users',
+			'pc_show1' : '/Weixin/Weixin_profile_info?userid=37290911'
+		},
 			self = this;
 		this.setData(data);
 		this.listenToOther(function(data){

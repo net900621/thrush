@@ -61,7 +61,7 @@ _controller.prototype = {
 		for (i in php){
 			data[i] = 'http://snake.com' + php[i];
 			var url = self.listenDate[i];
-			(function(i, url){
+			(function(_index, url){
 				var _self = self;
 				libHttp.get(data[i], function(res){
 					var _data = '';
@@ -69,7 +69,11 @@ _controller.prototype = {
 						_data += data;
 					});
 					res.on('end', function (data) {
-						cbk({'list' : JSON.parse(_data)});
+						self.listenCount --;
+						self.listenDate[_index] = JSON.parse(_data);
+						if (self.listenCount == 0) {
+							cbk(self.listenDate);
+						};
 					});
 				}).on('error', function(e) {
 				  console.log("错误：" + e.message);
