@@ -55,6 +55,15 @@ var conf = {
 	'insertPm' : function(){
 		var data = {'date' : '/insertPm'};
 		this.ajaxTo(data);
+	},
+	'pcTest' : function(){
+		var data = {'pc_show' : '/circle/recommend_follow_users'},
+			self = this;
+		this.setData(data);
+		this.listenToOther(function(data){
+			self.cssLink = ['pc'];
+			return self.render('a', data);
+		});
 	}
 };
 exports.__create = controller.__create(show, conf);

@@ -2,7 +2,7 @@
 console.time('[WebSvr][Start]');
 
 //请求模块
-var libHttp = require('http');    //HTTP协议模块
+global.libHttp = require('http');    //HTTP协议模块
 var libUrl=require('url');    //URL解析模块
 global.libFs = require("fs");    //文件系统模块
 var libPath = require("path");    //路径解析模块

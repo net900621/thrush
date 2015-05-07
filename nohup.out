@@ -1,0 +1,36 @@
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 177ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 77ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 315ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 268ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 80ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 84ms
+events.js:85
+      throw er; // Unhandled 'error' event
+            ^
+Error: getaddrinfo ENOTFOUND http://snake.com/
+    at errnoException (dns.js:44:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 77ms
+events.js:85
+      throw er; // Unhandled 'error' event
+            ^
+Error: getaddrinfo ENOTFOUND http://snake.com/
+    at errnoException (dns.js:44:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 82ms
+events.js:85
+      throw er; // Unhandled 'error' event
+            ^
+Error: getaddrinfo ENOTFOUND http://snake.com/
+    at errnoException (dns.js:44:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 81ms

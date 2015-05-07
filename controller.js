@@ -49,6 +49,34 @@ _controller.prototype = {
 			}
 		}
 	},
+	listenToOther : function(cbk){
+		var _num = 0;
+		var data = {};
+		var php = this.listenDate;
+		var _php = php;
+		var self = this;
+		if (!self.listenCount ) {
+			cbk(self.listenDate);
+		};
+		for (i in php){
+			data[i] = 'http://snake.com' + php[i];
+			var url = self.listenDate[i];
+			(function(i, url){
+				var _self = self;
+				libHttp.get(data[i], function(res){
+					var _data = '';
+					res.on('data', function (data) {
+						_data += data;
+					});
+					res.on('end', function (data) {
+						cbk({'list' : JSON.parse(_data)});
+					});
+				}).on('error', function(e) {
+				  console.log("错误：" + e.message);
+				});
+			})(i, url);
+		}
+	},
 	setData : function(data){
 		_controller.call(this);
 		for (i in data){
