@@ -140,8 +140,7 @@ nodejs语法，前后端协同。
 	代琴（lark 4 pc）
 
 ##修改点
-	支持了异步数据拉取
-	加入了post、get请求参数捆绑
+	支持了承接其它model层的接口方法
 
 ##TODO
-	插入demo
+	none
