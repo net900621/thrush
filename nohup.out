@@ -34,3 +34,97 @@ Error: getaddrinfo ENOTFOUND http://snake.com/
     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 81ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 207ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 623ms
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41
+			instances.forEach(cb);
+			         ^
+TypeError: Cannot read property 'forEach' of undefined
+    at Object.<anonymous> (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41:13)
+    at ChainInstance.next (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:32:12)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:13:11
+    at Query._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:201:13)
+    at Query.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Query.ErrorPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Query.js:93:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+    at Protocol.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:37:16)
+    at Socket.ondata (_stream_readable.js:540:20)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 191ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 550ms
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41
+			instances.forEach(cb);
+			         ^
+TypeError: Cannot read property 'forEach' of undefined
+    at Object.<anonymous> (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41:13)
+    at ChainInstance.next (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:32:12)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:13:11
+    at Query._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:201:13)
+    at Query.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Query.ErrorPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Query.js:93:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+    at Protocol.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:37:16)
+    at Socket.ondata (_stream_readable.js:540:20)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 428ms
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41
+			instances.forEach(cb);
+			         ^
+TypeError: Cannot read property 'forEach' of undefined
+    at Object.<anonymous> (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41:13)
+    at ChainInstance.next (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:32:12)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:13:11
+    at Query._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:201:13)
+    at Query.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Query.ErrorPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Query.js:93:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+    at Protocol.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:37:16)
+    at Socket.ondata (_stream_readable.js:540:20)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 322ms
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41
+			instances.forEach(cb);
+			         ^
+TypeError: Cannot read property 'forEach' of undefined
+    at Object.<anonymous> (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41:13)
+    at ChainInstance.next (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:32:12)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:13:11
+    at Query._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:201:13)
+    at Query.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Query.ErrorPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Query.js:93:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+    at Protocol.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:37:16)
+    at Socket.ondata (_stream_readable.js:540:20)
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 86ms
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+Connection error: Error: ER_NO_SUCH_TABLE: Table 'lark.mytable' doesn't exist
+/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41
+			instances.forEach(cb);
+			         ^
+TypeError: Cannot read property 'forEach' of undefined
+    at Object.<anonymous> (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:41:13)
+    at ChainInstance.next (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:32:12)
+    at /Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainInstance.js:13:11
+    at Query._callback (/Users/a2014-280/hetweb/thrush/node_modules/orm/lib/ChainFind.js:201:13)
+    at Query.Sequence.end (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Sequence.js:66:24)
+    at Query.ErrorPacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/sequences/Query.js:93:8)
+    at Protocol._parsePacket (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:172:24)
+    at Parser.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Parser.js:62:12)
+    at Protocol.write (/Users/a2014-280/hetweb/thrush/node_modules/mysql/lib/protocol/Protocol.js:37:16)
+    at Socket.ondata (_stream_readable.js:540:20)

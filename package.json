@@ -1,0 +1,12 @@
+{
+	"name": "thrush",
+	"version": "1.0.0",
+	"description": "node mvc",
+	"main": "index.js",
+	"author": "yaoyao",
+	"dependencies": {
+	    "mysql": "2.0.0-alpha8",
+	    "node=mysql": "0.4.1",
+	    "orm": "2.1.20"
+	}
+}

@@ -1,3 +1,4 @@
 www/tmp/*
 nohup.out
 config/pid
+node_modules/*
