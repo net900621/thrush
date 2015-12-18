@@ -135,10 +135,10 @@ var contentTypes = {
 	"zip": "application/zip"
 };
 
-var funGetContentType=function(filePath){
+var funGetContentType = function(filePath){
 	var contentType = "";
 	//使用路径解析模块获取文件扩展名
-	var ext=libPath.extname(filePath);
+	var ext = libPath.extname(filePath);
 	contentType = contentTypes[ext];
 	return contentType; //返回内容类型字符串
 }
