@@ -23,6 +23,8 @@ nodejs语法，前后端协同。
 
 ###首先
 
+	npm install
+
 	在www下创建tmp文件夹，不过其实可以直接通过cmd文件夹下的restart脚本自动创建
 
 ###controller写法
