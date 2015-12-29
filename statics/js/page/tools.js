@@ -38,4 +38,22 @@ fml.define('page/pc', ['jquery' , 'common/QRCode'], function(require, exports) {
 
 		event.preventDefault();
 	});
+	$('#j-arr3').on('blur', function(event) {
+
+		var _this = $(this),
+			_val = _this.val();
+
+		_this.val('http://m.meilishuo.com/sq/connectCircle?goback=' + encodeURIComponent(_val));
+
+		event.preventDefault();
+	});
+	$('#j-arr4').on('blur', function(event) {
+
+		var _this = $(this),
+			_val = _this.val();
+
+		_this.val('http://m.meilishuo.com/wx/connectCircle?goback=' + encodeURIComponent(_val));
+
+		event.preventDefault();
+	});
 });
