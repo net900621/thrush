@@ -158,3 +158,5 @@ Error: Cannot find module 'orm'
     at Module.require (module.js:365:17)
 [WebSvr][Start] running at http://127.0.0.1:8124/
 [WebSvr][Start]: 125ms
+[WebSvr][Start] running at http://127.0.0.1:8124/
+[WebSvr][Start]: 303ms
