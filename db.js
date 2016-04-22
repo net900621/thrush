@@ -24,6 +24,24 @@ function doDb (self, key, callback, _opt) {
 
 }
 
+function dbOut (self, url, key){
+	
+	self.count ++;
+
+	libHttp.get(url, function(res){
+		var _data = '';
+		res.on('data', function (data) {
+			_data += data;
+		});
+		res.on('end', function (data) {
+			_cbk(_data, self, key);
+		});
+	}).on('error', function(e) {
+	  console.log("错误：" + e.message);
+	});
+
+}
+
 function dbFind (self, key, _opt) {
 	self.count ++;
 	var callback = function(db, self, key, _cbk, _opt){
@@ -116,3 +134,4 @@ exports.dbRemove = dbRemove;
 exports.dbUpdate = dbUpdate;
 exports.dbInsert = dbInsert;
 exports.dbResult = dbResult;
+exports.dbOut = dbOut;

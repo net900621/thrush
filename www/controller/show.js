@@ -64,6 +64,7 @@ var conf = {
 			self = this;
 		this.setData(data);
 		this.listenToOther(function(data){
+			console.log(data)
 			self.cssLink = ['pc'];
 			return self.render('a', data);
 		});

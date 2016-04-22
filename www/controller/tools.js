@@ -4,10 +4,12 @@ var tools = function() {
 var conf = {
 	'index' : function(){
 		var data = {
+			'test': '/test'
 		},
 			self = this;
 		this.setData(data);
 		this.listen(function(data){
+			
 			self.cssLink = ['tools'];
 			return self.render('tools', data);
 		});
