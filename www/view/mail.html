@@ -1,0 +1,18 @@
+<%# head.html #%>
+<div>
+
+	<div>
+		<div><label>账户名</label><input type="text" id="id"></div>
+		<div><label>密码</label><input type="text" id="password"></div>
+		<div><label>收件人</label><input type="text" id="to"></div>
+		<div><label>域名</label><input type="text" id="host"></div>
+		<div><label>标题</label><input type="text" id="title"></div>
+		<div><label>内容</label><input type="text" id="text"></div>
+		<button id="commit"></button>
+	</div>
+
+</div>
+<%
+	fml.use('page/mail');
+%>
+<%# footer.html #%>

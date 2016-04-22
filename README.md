@@ -1,6 +1,8 @@
 thrush
 ======
 
+[![npm version](https://badge.fury.io/js/thrushs.svg)](https://badge.fury.io/js/thrushs)
+
 #基于node的简单mvc框架
 
 ##轻量
