@@ -3,7 +3,11 @@ basepath=$(cd `dirname $0`; pwd)'/../'
 pid=`cat $basepath'config/pid'`
 stopService(){
 	if [ $pid ];then
-	kill $pid
+		if [ `ps -ef | grep $pid|wc -l` > 1 ]; then
+			kill $pid
+		fi
+	else
+		pkill node
 	fi
 	rm -rf $basepath'www/tmp/*'
 	echo '' >  $basepath'config/pid'
@@ -11,11 +15,21 @@ stopService(){
 startService(){
 	cd $basepath
 	nohup node $basepath'index.js'&
-	mkdir '/tmp/log/'
-	mkdir '/tmp/log/thrush/'
-	mkdir '/tmp/log/thrush/'`date +%Y`
-	mkdir '/tmp/log/thrush/'`date +%Y/%m`
-	mkdir $basepath'www/tmp/'
+	if [ ! -d '/tmp/log/' ]; then 
+		mkdir '/tmp/log/'
+	fi
+	if [ ! -d '/tmp/log/thrush/' ]; then 
+		mkdir '/tmp/log/thrush/'
+	fi
+	if [ ! -d '/tmp/log/thrush/'`date +%Y` ]; then 
+		mkdir '/tmp/log/thrush/'`date +%Y`
+	fi
+	if [ ! -d '/tmp/log/thrush/'`date +%Y/%m` ]; then 
+		mkdir '/tmp/log/thrush/'`date +%Y/%m`
+	fi
+	if [ ! -d $basepath'www/tmp/' ]; then 
+		mkdir $basepath'www/tmp/'
+	fi
 	echo '' >  '/tmp/log/thrush/'`date +%Y/%m/%d`
 	echo '/tmp/log/thrush/'`date +%Y/%m/%d`
 }
