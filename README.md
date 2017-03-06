@@ -67,6 +67,7 @@ nodejs语法，前后端协同。
 		var data = {'list' : '/insert'};
 		this.ajaxTo(data);
 	}	
+	如果model层独立，使用this.listenToOther方法取代listen方法，data数组里放具体路径，在config/path.json里修改请求域名。
 
 ###model写法
 
