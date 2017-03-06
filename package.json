@@ -9,5 +9,8 @@
 	    "node-mysql": "0.4.1",
 	    "orm": "2.1.20",
 	    "nodemailer" : ""
-	}
+	},
+	"scripts": {
+    	"start": "sh cmd/restart restart"
+  	}
 }
