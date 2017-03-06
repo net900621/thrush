@@ -1,4 +1,5 @@
 var util = require('util');
+var config = require('./config');
 var _controller = function(){
 	this.listenStack = [];
 	this.listenDate = {};
@@ -59,7 +60,7 @@ _controller.prototype = {
 			cbk(self.listenDate);
 		};
 		for (i in php){
-			data[i] = 'http://snake.com' + php[i];
+			data[i] = config.path.host + php[i];
 			var url = self.listenDate[i];
 			(function(_index, url){
 				var _self = self;
@@ -70,7 +71,13 @@ _controller.prototype = {
 					});
 					res.on('end', function (data) {
 						self.listenCount --;
-						self.listenDate[_index] = JSON.parse(_data);
+						try{
+							self.listenDate[_index] = JSON.parse(_data);
+						}catch(e){
+							self.listenDate[_index] = {};
+							console.log(e.message);
+							console.log(e.stack);
+						}
 						if (self.listenCount == 0) {
 							cbk(self.listenDate);
 						};
