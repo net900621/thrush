@@ -67,8 +67,8 @@ node-mysql@0.4.1:
     underscore "*"
 
 nodemailer@:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-3.1.4.tgz#0c969a7fb7990a1b1c92a9d9f5b0b84c41e4c1f8"
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.6.0.tgz#ed47bb572b48d9d0dca3913fdc156203f438f427"
 
 orm@2.1.20:
   version "2.1.20"
